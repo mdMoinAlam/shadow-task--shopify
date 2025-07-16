@@ -1,0 +1,47 @@
+<!-- Decify Start -->
+<script>
+    window.decifyDataLayer = window.decifyDataLayer || [];
+
+    window.decifyDataLayer.push({
+        event: "page_view",
+        shopify: {
+            localization: {
+                language: {
+                    iso_code: {{ localization.language.iso_code | json }},
+                },
+                country: {
+                    iso_code: {{ localization.country.iso_code | json }},
+                },
+                market: {
+                    id: {{ localization.market.id | json }},
+                    handle: {{ localization.market.handle | json }},
+                },
+            },
+        },
+    });
+
+    {% if customer %}
+    window.decifyDataLayer.push({
+        event: "identify",
+        ecommerce: {
+            customer: {
+                email: {{ customer.email | json }},
+                ordersCount: {{ customer.orders.size | json }},
+                tags: {{ customer.tags | json }},
+            },
+        },
+    });
+    {% endif %}
+</script>
+
+<script>
+    !function(d,e,c,i,f,y){
+        d.Decify=d.Decify||{},
+        d._DecifyConfig={projectId:"67036e5de44b03e09980ad18",version:"0"},
+        f=e.getElementsByTagName("head")[0],
+        (y=e.createElement("script")).async=1,
+        y.src="https://cdn.decify.ai/surveys/c/"+d._DecifyConfig.projectId+".js?v="+d._DecifyConfig.version,
+        f.appendChild(y)
+    }(window,document);
+</script>
+<!-- Decify End -->

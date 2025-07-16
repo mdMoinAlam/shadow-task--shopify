@@ -1,0 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "blog",
+      "settings": {
+        "layout": "grid",
+        "blog_show_meta": false,
+        "overlay_opacity": 30,
+        "overlay_color": "#000",
+        "image_height": "use_screen_one_third",
+        "text_color": "text--white",
+        "tags": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

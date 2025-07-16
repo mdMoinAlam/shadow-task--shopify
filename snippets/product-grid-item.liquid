@@ -1,0 +1,273 @@
+{% comment %}
+  A grid item for products used in collection grid view
+
+  * product {object} - The current prodcut
+
+  {% render 'product-grid-item', product: product %}
+{% endcomment %}
+
+{%- liquid
+  assign current_variant = product.first_available_variant
+
+  assign on_sale = false
+  if product.compare_at_price > product.price
+    assign on_sale = true
+  endif
+
+  assign sold_out = true
+  if product.available
+    assign sold_out = false
+  endif
+
+  assign sellout_badge = false
+  if sold_out and settings.badge_sellout
+    assign sellout_badge = true
+  endif
+
+  assign sale_badge = false
+  if on_sale and settings.badge_sale
+    assign sale_badge = true
+    assign sale_badge_content = 'products.product.sale' | t
+    if settings.badge_sale_discount
+      if settings.badge_sale_type == 'dollar'
+        assign sale_badge_content = product.compare_at_price | minus: product.price | money_without_trailing_zeros
+      else
+        assign difference = product.compare_at_price | minus: product.price
+        assign percent_off = difference | times: 1.0 | divided_by: product.compare_at_price | times: 100
+        assign sale_badge_content = percent_off | floor | append: '%'
+      endif
+      assign save_word = 'products.product.save' | t | append: ' '
+      assign sale_badge_content = sale_badge_content | prepend: save_word
+    endif
+  endif
+
+  assign custom_badge = false
+  if settings.badge_custom
+    for tag in product.tags
+      if tag contains '_badge_'
+        assign custom_badge = true
+        assign custom_badge_content = tag | remove: '_badge_' | replace: '_', ' '
+        break
+      endif
+    endfor
+  endif
+
+  assign setting_badge = false
+  if badge_string and badge_string != ''
+    assign setting_badge = true
+  endif
+
+  assign tagged = false
+  if sellout_badge or sale_badge or custom_badge or setting_badge
+    assign tagged = true
+  endif
+-%}
+{%- capture badge -%}
+  {%- if tagged %}
+    {%- if setting_badge -%}
+      <div class="product__badge product__badge--setting">{{ badge_string }}</div>
+    {%- elsif custom_badge -%}
+      <div class="product__badge product__badge--custom">{{ custom_badge_content }}</div>
+    {%- elsif sellout_badge -%}
+      <div class="product__badge product__badge--sold">{{ 'products.product.sold_out' | t }}</div>
+    {%- elsif sale_badge -%}
+      <div class="product__badge product__badge--sale">{{ sale_badge_content }}</div>
+    {%- endif -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture swatches -%}
+  {%- if settings.swatches_enable and settings.swatches_collection_enable -%}
+    {%- capture swatch_translation -%}{{ 'general.swatches.color' | t }}{%- endcapture -%}
+    {%- assign swatch_labels = swatch_translation | append: ',' | split: ',' -%}
+    {%- for label in swatch_labels -%}
+      {%- assign sanitized_label = label | lstrip | rstrip -%}
+      {%- if product.options_by_name[sanitized_label].values.size > 0 -%}
+        <div class="grid__swatch__container">
+          <p class="grid__swatch__placeholder">{{ 'collections.general.swatches_with_count' | t: count: product.options_by_name[sanitized_label].values.size }}</p>
+          <form class="grid__swatch__hover" data-grid-swatches data-swatch-handle="{{ product.handle }}" data-swatch-label="{{ label }}"></form>
+        </div>
+        {% break %}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- liquid
+  assign double_img = false
+  if product.media[1].preview_image and settings.image_hover_enable
+    assign double_img = true
+  endif
+
+  assign product_img_ratio = product.featured_media.preview_image.aspect_ratio | default: 1
+  assign image_ratio = 1 | divided_by: product_img_ratio | times: 100
+  if settings.product_grid_image == 'crop'
+    assign image_ratio = settings.product_grid_aspect_ratio | times: 100
+  elsif settings.product_grid_image == 'scale'
+    assign multiplier = settings.product_grid_aspect_ratio
+    assign inverse_ratio = 1 | divided_by: product_img_ratio
+    assign top_offset = 1 | divided_by: product_img_ratio | times: 100 | divided_by: 2
+    assign top_offset_subtractor = multiplier | times: 100 | divided_by: 2
+  endif
+-%}
+
+{%- if settings.product_grid_image == 'scale' -%}
+  {%- capture auto_height -%}
+    {%- if inverse_ratio > multiplier -%}
+      style="width:{{ product_img_ratio | times: multiplier | times: 100 }}%; margin: 0 auto;"
+    {%- else -%}
+      style="padding:{{ top_offset_subtractor | minus: top_offset }}% 0;"
+    {%- endif -%}
+  {%- endcapture -%}
+{%- endif -%}
+
+<div
+  class="product-grid-item {{ image_classes }}{% if on_sale %} on-sale{% endif %}{% if tagged %} tagged{% endif %}"
+  data-grid-item
+>
+  {%- if product.metafields.custom.ohrseite != blank -%}
+    {% assign ohrseite = product.metafields.custom.ohrseite | strip | remove: '[' | remove: ']' | remove: '"' | strip %}
+    <div class="product__grid__ohrseite ohrseite__{{ ohrseite | downcase | replace: ' ', '_' }}" style="display: none;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M15.1875 7.3125C15.1875 7.46168 15.1282 7.60476 15.0227 7.71025C14.9173 7.81574 14.7742 7.875 14.625 7.875C14.4758 7.875 14.3327 7.81574 14.2273 7.71025C14.1218 7.60476 14.0625 7.46168 14.0625 7.3125C14.0625 5.96984 13.5291 4.68217 12.5797 3.73277C11.6303 2.78337 10.3427 2.25 9 2.25C7.65734 2.25 6.36967 2.78337 5.42027 3.73277C4.47087 4.68217 3.9375 5.96984 3.9375 7.3125C3.9375 9.18984 4.53727 9.76781 5.17289 10.3809C5.78039 10.9687 6.46875 11.6304 6.46875 13.2188C6.46875 13.8901 6.73543 14.5339 7.21014 15.0086C7.68484 15.4833 8.32867 15.75 9 15.75C9.72 15.75 10.2973 15.4575 10.8162 14.8296C10.8626 14.771 10.9203 14.7223 10.9859 14.6863C11.0514 14.6503 11.1234 14.6277 11.1978 14.6199C11.2721 14.612 11.3473 14.6191 11.4189 14.6406C11.4905 14.6622 11.5571 14.6978 11.6147 14.7454C11.6724 14.7929 11.72 14.8515 11.7548 14.9177C11.7895 14.9839 11.8108 15.0564 11.8172 15.1309C11.8236 15.2054 11.8152 15.2804 11.7923 15.3516C11.7694 15.4227 11.7325 15.4886 11.6838 15.5454C10.9554 16.4278 10.0547 16.875 9 16.875C8.03064 16.8739 7.10131 16.4883 6.41587 15.8029C5.73044 15.1174 5.34487 14.1881 5.34375 13.2188C5.34375 12.1085 4.94437 11.7232 4.39172 11.1909C3.68859 10.5117 2.8125 9.66797 2.8125 7.3125C2.8125 5.67147 3.4644 4.09766 4.62478 2.93728C5.78516 1.7769 7.35897 1.125 9 1.125C10.641 1.125 12.2148 1.7769 13.3752 2.93728C14.5356 4.09766 15.1875 5.67147 15.1875 7.3125ZM12.5065 11.3259C12.4425 11.2888 12.3719 11.2647 12.2986 11.255C12.2253 11.2452 12.1507 11.25 12.0793 11.2691C12.0079 11.2882 11.9409 11.3211 11.8822 11.3661C11.8235 11.4111 11.7742 11.4672 11.7373 11.5312C11.6754 11.6385 11.5798 11.7224 11.4654 11.7698C11.351 11.8173 11.2241 11.8256 11.1044 11.7936C10.9848 11.7615 10.8791 11.6909 10.8037 11.5926C10.7283 11.4943 10.6875 11.3739 10.6875 11.25C10.6875 10.594 11.0264 10.1419 11.4187 9.61875C11.8666 9.02109 12.375 8.34398 12.375 7.3125C12.375 6.41739 12.0194 5.55895 11.3865 4.92601C10.7536 4.29308 9.89511 3.9375 9 3.9375C8.10489 3.9375 7.24645 4.29308 6.61351 4.92601C5.98058 5.55895 5.625 6.41739 5.625 7.3125C5.625 7.46168 5.68426 7.60476 5.78975 7.71025C5.89524 7.81574 6.03832 7.875 6.1875 7.875C6.33668 7.875 6.47976 7.81574 6.58525 7.71025C6.69074 7.60476 6.75 7.46168 6.75 7.3125C6.75 6.71576 6.98705 6.14347 7.40901 5.72151C7.83097 5.29955 8.40326 5.0625 9 5.0625C9.59674 5.0625 10.169 5.29955 10.591 5.72151C11.0129 6.14347 11.25 6.71576 11.25 7.3125C11.25 7.96852 10.9111 8.42062 10.5188 8.94375C10.0709 9.54141 9.5625 10.2185 9.5625 11.25C9.56262 11.6214 9.68525 11.9823 9.91137 12.2769C10.1375 12.5715 10.4545 12.7833 10.8132 12.8794C11.1719 12.9756 11.5523 12.9507 11.8955 12.8086C12.2386 12.6666 12.5253 12.4153 12.7111 12.0938C12.7856 11.9648 12.8059 11.8115 12.7676 11.6675C12.7292 11.5236 12.6353 11.4007 12.5065 11.3259Z" fill="#453939"/>
+      </svg>
+      {{ ohrseite }}
+    </div>
+  {%- endif -%}
+
+  <div {{ auto_height }}>
+    <a
+      href="{{ product.url | within: collection }}"
+      data-grid-link
+      class="lazy-image{% if double_img %} double__image{% endif %}"
+      aria-label="{{ product.title | strip_html | escape }}"
+      style="padding-top:{{ image_ratio }}%; background-image:  url('{{ product.featured_media.preview_image | img_url: '1x1' }}');"
+    >
+      <div
+        class="lazyload fade-in collection__image__top"
+        data-bgset="{% render 'bgset', image: product.featured_media.preview_image %}"
+        role="img"
+        aria-label="{{ product.featured_media.alt | default: product.title | strip_html | escape }}"
+      ></div>
+      {% if double_img %}
+        <div class="collection__image__bottom">
+          {%- assign img_url = product.media[1].preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          <img
+            data-src="{{ img_url }}"
+            class="lazyload img-object-cover lazypostload-desktop"
+            width="{{ product.media[1].preview_image.width }}"
+            height="{{ product.media[1].preview_image.height }}"
+            data-widths="[110, 160, 220, 320, 480, 540, 720, 900]"
+            data-sizes="auto"
+            data-aspectratio="{{ product.media[1].preview_image.aspect_ratio }}"
+            alt="{{ product.media[1].alt | strip_html | escape }}"
+          >
+        </div>
+      {% endif %}
+      <div class="product-grid-item__slide" data-grid-slide></div>
+      {{ badge }}
+    </a>
+  </div>
+
+  <noscript>
+    <a href="{{ product.url | within: collection }}">
+      <img
+        class="responsive-wide-image"
+        src="{{ product.featured_media.preview_image | img_url: '360x' }}"
+        alt="{{ product.featured_media.alt | default: product.title | strip_html | escape }}"
+      >
+      {{ badge }}
+    </a>
+  </noscript>
+
+  <div class="product__grid__info product__grid__info--{{ settings.product_grid_style }} {{ text_align | default: settings.collection_text_alignment | default: 'text-center' }}">
+    <!-- Custom Mercury -->
+    {%- if product.compare_at_price > product.price -%}
+      {% assign discount_amount = product.compare_at_price | minus: product.price %}
+      {% assign discount_percentage = discount_amount | times: 100 | divided_by: product.compare_at_price | round %}
+
+      <p
+        class="discount-_percentage"
+        style="background-color:{{ settings.colors.discount_text_background }}; color:{{ settings.colors.discount_text_color }}"
+      >
+        -{{ discount_percentage }}%
+      </p>
+    {%- endif -%}
+    <!-- Custom Mercury -->
+
+    <a href="{{ product.url | within: collection | capitalize }}">
+      <div class="product__grid__title__wrapper">
+        <p class="product__grid__title odv_product_title">
+          {{ product.title }}
+        </p>
+        {%- if settings.product_grid_show_rating and product.metafields.reviews.rating.value != blank -%}
+          <div class="rating__wrapper__grid">
+            {% render 'product-rating', product: product, show_rating_count: settings.product_grid_show_rating_count %}
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="product__grid__price">
+        {% if product.compare_at_price > product.price %}
+          <span data-price-off class="product__price--off odv_price_off">
+            <span data-price-off-type style="display: none;"></span>
+            <span class="variant_a">{{ product.compare_at_price | minus: product.price | money }}</span>
+
+            {% assign money_format = shop.money_format %}
+            {% if money_format contains '€' %}
+              <span class="variant_b">
+                {{- product.compare_at_price | minus: product.price | money_without_currency }}€</span
+              >
+            {% else %}
+              <span class="variant_b">{{ product.compare_at_price | minus: product.price | money }}</span>
+            {% endif %}
+            {{ 'products.product.save' | t }}
+          </span>
+        {% endif %}
+        <span class="price{% if on_sale %} on-sale{% endif %}">
+          {% comment %}{% if product.price_varies %}{{ 'products.general.from' | t }} {% endif %}{% endcomment %}
+          <span class="variant_a">{{ product.price | money }}</span>
+          {% assign money_format = shop.money_format %}
+          {% if money_format contains '€' %}
+            <span class="variant_b">{{ product.price | money_without_currency }}€</span>
+          {% else %}
+            <span class="variant_b">{{ product.price | money }}</span>
+          {% endif %}
+        </span>
+        {% if on_sale %}
+          <span class="compare-at">
+            <span class="variant_a">{{ product.compare_at_price | money }}</span>
+            {% assign money_format = shop.money_format %}
+            {% if money_format contains '€' %}
+              <span class="variant_b">{{ product.compare_at_price | money_without_currency }}€</span>
+            {% else %}
+              <span class="variant_b">{{ product.compare_at_price | money }}</span>
+            {% endif %}
+          </span>
+        {% endif %}
+        {% if current_variant.unit_price %}
+          {% capture unit_price_separator %}
+            <span aria-hidden="true">/</span><span class="visually-hidden">{{ 'general.accessibility.unit_price_separator' | t }}&nbsp;</span>
+          {% endcapture %}
+          {% capture unit_price_base_unit %}
+            {% if current_variant.unit_price_measurement.reference_value != 1 %}
+              {{ current_variant.unit_price_measurement.reference_value }}
+            {% endif %}
+            {{ current_variant.unit_price_measurement.reference_unit }}
+          {% endcapture %}
+          <br>
+          <span class="visually-hidden">{{ 'products.product.unit_price_label' | t }}</span>
+          <span class="price-per-unit">
+            {{- current_variant.unit_price | money -}}
+            {{- unit_price_separator -}}
+            {{- unit_price_base_unit -}}
+          </span>
+        {% endif %}
+        {% if sold_out %}
+          <br>
+          <em>{{ 'products.product.sold_out' | t }}</em>
+        {% endif %}
+        {{ swatches }}
+      </div>
+    </a>
+  </div>
+</div>

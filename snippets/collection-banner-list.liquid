@@ -1,0 +1,43 @@
+{% comment %}
+  This snippet loops over a collection metafield: collection_button_list (type: metaobject list)
+  Each metaobject includes: button_label, button_icon, button_primary_url, etc.
+  It highlights the active collection.
+{% endcomment %}
+
+{% if productCount == fbp %}
+  {% assign banner_count = 1 %}
+{% elsif productCount == sbp %}
+  {% assign banner_count = 2 %}
+{% elsif productCount == tbp %}
+  {% assign banner_count = 3 %}
+{% else %}
+  {% assign banner_count = 0 %}
+{% endif %}
+
+{% if banner_count != 0 %}
+  {% assign banners = collection.metafields.custom.collection_banner_list.value %}
+
+  {% if banners != blank %}
+    {% for banner in banners %}
+      {% if forloop.index == banner_count %}
+        <div class="collection__banner__meta collection__banner--{{ banner_count }}">
+          {% comment %} <p>{{ banner.banner_heading | escape }}</p> {% endcomment %}
+          <div class="banner-badge">
+            <p>{{ banner.banner_badge | escape }}</p>
+          </div>
+          <div class="banner-img">
+            <img src="{{ banner.banner_image | image_url }}" width="" height="" alt="">
+          </div>
+          <div class="banner-header">
+            <p>{{ banner.banner_heading | escape }}</p>
+          </div>
+          <div class="banner-btn">
+            <a href="{{ banner.banner_button_url | escape}}" target="_blank">
+              {{- banner.banner_button_text | escape -}}
+            </a>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endif %}

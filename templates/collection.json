@@ -1,0 +1,182 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "subcollections": {
+      "type": "collection-sub",
+      "disabled": true,
+      "settings": {
+        "show_subcollection": true,
+        "text_color": "text--white",
+        "text_align": "align--middle-center",
+        "select_image": "collection",
+        "bg_position": "center-center",
+        "aspect_ratio": 0.6,
+        "overlay_opacity": 20,
+        "overlay_color": "#000000"
+      }
+    },
+    "16432106057a80a5d0": {
+      "type": "section-collection-grid",
+      "blocks": {
+        "16432106041f9a24f7-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "airpods-3-generation",
+            "title": "Airpods 3. Generation",
+            "link_text": "Ansehen",
+            "button_link": ""
+          }
+        },
+        "623d7cdd-f812-4be8-b9a5-c46504e2f43a": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "apple-airpods-pro-ersatz",
+            "title": "Apple Airpods Pro 1. Generation",
+            "link_text": "Ansehen",
+            "button_link": ""
+          }
+        },
+        "a57ae706-2363-434b-a3bd-7a6a096c5bd1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "apple-airpods-2-generation-ersatz",
+            "title": "Airpods 2. Generation",
+            "link_text": "Ansehen",
+            "button_link": ""
+          }
+        },
+        "16432106041f9a24f7-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "apple-airpods-ladecases",
+            "title": "Ladecases",
+            "link_text": "Ansehen",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16432106041f9a24f7-1",
+        "623d7cdd-f812-4be8-b9a5-c46504e2f43a",
+        "a57ae706-2363-434b-a3bd-7a6a096c5bd1",
+        "16432106041f9a24f7-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Shop",
+        "grid": 4,
+        "bg": "palette--light bg--neutral",
+        "text_color": "text--white",
+        "button_style": "btn--outline",
+        "button_color": "btn--white",
+        "overlay_opacity": 15,
+        "overlay_color": "#000000",
+        "aspect_ratio": 0.7
+      }
+    },
+    "main": {
+      "type": "collection",
+      "blocks": {
+        "collections": {
+          "type": "collections",
+          "settings": {
+            "title": "All collections"
+          }
+        },
+        "filters": {
+          "type": "filters",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "collections",
+        "filters"
+      ],
+      "settings": {
+        "grid_setting_large": 3,
+        "grid_setting_small": 2,
+        "product_limit": 20,
+        "enable_layout_toggle": true,
+        "collection_sorting": true,
+        "hide_sidebar": false
+      }
+    },
+    "1643302725294b3573": {
+      "type": "section-icons",
+      "blocks": {
+        "1643302725e95abefe-0": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-basket-return",
+            "icon_color": "#aaaaaa",
+            "title": "Free returns",
+            "text": "<p>Returns within 30 days receive a full refund.</p>"
+          }
+        },
+        "1643302725e95abefe-1": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-shipment-world",
+            "icon_color": "#aaaaaa",
+            "title": "Worldwide shipping",
+            "text": "<p>Ship anywhere, rates available at checkout.</p>"
+          }
+        },
+        "1643302725e95abefe-2": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-phone",
+            "icon_color": "#aaaaaa",
+            "title": "24/7 support",
+            "text": "<p>Call us anytime at 1(800) 555-1234.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "1643302725e95abefe-0",
+        "1643302725e95abefe-1",
+        "1643302725e95abefe-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "bg": "palette--light bg--neutral",
+        "icon_size": "icon--medium",
+        "icon_alignment": "icon--top",
+        "align_text": "text-center"
+      }
+    },
+    "hero": {
+      "type": "collection-hero",
+      "settings": {
+        "text_align": "align--top-left",
+        "show_title": true,
+        "show_title_below": false,
+        "show_description": true,
+        "show_description_below": false,
+        "show_image": false,
+        "bg_position": "left-center",
+        "image_height": "use_screen_one_third",
+        "overlay_opacity": 20,
+        "overlay_color": "#000000",
+        "text_color": "text--white"
+      }
+    }
+  },
+  "order": [
+    "subcollections",
+    "16432106057a80a5d0",
+    "main",
+    "1643302725294b3573",
+    "hero"
+  ]
+}

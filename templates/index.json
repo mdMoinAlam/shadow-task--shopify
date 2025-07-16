@@ -1,0 +1,700 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "section-hero",
+      "settings": {
+        "image": "shopify://shop_images/shutterstock_1594507702-2.jpg",
+        "mobile_image": "shopify://shop_images/shutterstock_1594507702-2.jpg",
+        "bg_position": "center-center",
+        "height": "use_screen_one_half",
+        "overlay_opacity": 30,
+        "overlay_color": "#000000",
+        "kicker": "Airpods verloren?",
+        "title": "Apple Airpods einzeln kaufen",
+        "richtext": "<p>Versand innerhalb von 24 Stunden</p>",
+        "text_align": "align--middle-center",
+        "text_color": "text--white",
+        "link_text": "JETZT PASSENDEN ERSATZ FINDEN",
+        "link": "shopify://collections/shop",
+        "button_color": "btn--white",
+        "button_style": "btn"
+      }
+    },
+    "tabs": {
+      "type": "section-collection-tabs",
+      "blocks": {
+        "tab-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "airpods",
+            "title": "AirPods"
+          }
+        },
+        "ebbeb175-cbfb-47d7-8503-6b195ebef5ed": {
+          "type": "collection",
+          "settings": {
+            "collection": "apple-airpods-ladecases",
+            "title": "Ladecase"
+          }
+        },
+        "tab-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "apple-airpods-ladekabel",
+            "title": "Zubehör"
+          }
+        }
+      },
+      "block_order": [
+        "tab-0",
+        "ebbeb175-cbfb-47d7-8503-6b195ebef5ed",
+        "tab-1"
+      ],
+      "settings": {
+        "title": "Unsere Produkte",
+        "grid": 6,
+        "limit": 11,
+        "bg": "palette--light bg--neutral"
+      }
+    },
+    "171886996353c49940": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "width": "wrapper",
+        "height": "margin--medium",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral"
+      }
+    },
+    "icons": {
+      "type": "section-icons",
+      "blocks": {
+        "bea9e0fe-72d8-4d5e-b94f-40985648ab72": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-rating",
+            "icon_color": "#ff9400",
+            "title": "Original Apple",
+            "text": "<p>Alle unsere AirPods und Ladecases sind 100% Original Apple. Garantiert!</p>"
+          }
+        },
+        "icons-0": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-shipment",
+            "icon_color": "#abda92",
+            "title": "Kostenloser Versand",
+            "text": "<p>Ware ist in 24 Stunden versandbereit und Deutschlandweit kostenlos</p>"
+          }
+        },
+        "icons-1": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-basket-return",
+            "icon_color": "#92c1da",
+            "title": "30 Tage Rückgaberecht",
+            "text": "<p>Nicht zufrieden? Kein Problem! Schick uns die AirPods einfach wieder zurück.</p>"
+          }
+        },
+        "icons-2": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-phone",
+            "icon_color": "#f4a482",
+            "title": "Deutscher Support",
+            "text": "<p>Jederzeit per e-Mail unter service@oneearpod.com. Bereits 40.000+ zufriedene Kunden</p>"
+          }
+        }
+      },
+      "block_order": [
+        "bea9e0fe-72d8-4d5e-b94f-40985648ab72",
+        "icons-0",
+        "icons-1",
+        "icons-2"
+      ],
+      "settings": {
+        "title": "",
+        "bg": "palette--light bg--accent",
+        "icon_size": "icon--medium",
+        "icon_alignment": "icon--top",
+        "align_text": "text-center"
+      }
+    },
+    "section_html_PxAWMr": {
+      "type": "section-html",
+      "settings": {
+        "html": "<!-- Begin eTrusted bootstrap tag -->\n<script src=\"https://integrations.etrusted.com/applications/widget.js/v2\" defer async></script>\n<!-- End eTrusted bootstrap tag -->\n<!-- Begin eTrusted widget tag -->\n<etrusted-widget data-etrusted-widget-id=\"wdg-5d40be44-5737-421c-996d-b414bb08cfe7\"></etrusted-widget>\n<!-- End eTrusted widget tag -->",
+        "full_width": true
+      }
+    },
+    "1643270466d6e8eb24": {
+      "type": "section-icons",
+      "blocks": {
+        "16432704669dfade47-0": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-store",
+            "icon_color": "#54bcf5",
+            "title": "Wir kaufen Originalsets von apple",
+            "text": "<p>Wir kaufen AirPods Originalsets bei Apple, prüfen diese auf Funktion und verpacken jedes Einzelteil separat und sicher. Somit bleibt Dir die volle Herstellergarantie erhalten</p>"
+          }
+        },
+        "16432704669dfade47-1": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-basket-like",
+            "icon_color": "#f9ca05",
+            "title": "Du bestellst bei uns im Shop",
+            "text": "<p>Du kannst bei uns jeden AirPod einzeln in unserem Shop raussuchen und direkt online bestellen und bequem per PayPal oder Kreditkarte bezahlen</p>"
+          }
+        },
+        "16432704669dfade47-2": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-truck",
+            "icon_color": "#18c700",
+            "title": "Versandfertig in 24 Stunden",
+            "text": "<p>Sobald Du Deine Bestellung aufgegeben hast, machen wir Dein Paket fertig und schicken es an Dich raus, sodass Du es innerhalb von 1-3 Tagen bei Dir hast</p>"
+          }
+        }
+      },
+      "block_order": [
+        "16432704669dfade47-0",
+        "16432704669dfade47-1",
+        "16432704669dfade47-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "So einfach Funktioniert OneEarPod",
+        "bg": "palette--light bg--neutral",
+        "icon_size": "icon--medium",
+        "icon_alignment": "icon--top",
+        "align_text": "text-center"
+      }
+    },
+    "1643324663adff0e59": {
+      "type": "section-gallery-text",
+      "blocks": {
+        "1643324663ac8e3b08-0": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "",
+            "text_align": "text-left"
+          }
+        }
+      },
+      "block_order": [
+        "1643324663ac8e3b08-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg": "palette--light bg--neutral"
+      }
+    },
+    "double": {
+      "type": "section-double",
+      "blocks": {
+        "b496aaab-3e3e-4e3b-97a6-9ca0a04f807a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/startup-desk.jpg",
+            "bg_position": "center-center",
+            "overlay_opacity": 15,
+            "overlay_color": "#000000",
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "Shop Now",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn uppercase"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "kicker": "Ersatz AirPods oder Ladecase Einrichten",
+            "title": "",
+            "text": "<p>1. \"Einstellungen\" &gt; \"Bluetooth\", und tippe auf die Info-Taste  neben den AirPods.</p><p>2. Tippe auf \"Dieses Gerät ignorieren\".</p><p>3. Tippe auf \"Gerät ignorieren\", und tippe dann zur Bestätigung erneut.</p><p>4. Lege beide AirPods in das Ladecase.</p><p>5. Öffne den Deckel, und überprüfe die Statusanzeige. Sie sollte gelb blinken.</p><p>6. Halte die Setup-Taste an der Rückseite des AirPods-Ladecase ein paar Sekunden lang gedrückt. Die Statusanzeige sollte nun weiß blinken.</p><p>7. Gehe auf deinem iPhone, iPad oder iPod touch zum Home-Bildschirm.</p><p>8. Öffne das Case, in dem sich die AirPods befinden, und halte es neben dein iPhone, iPad oder deinen iPod touch. Auf dem Display wird eine Animation für die Einrichtung angezeigt.</p><p>9. Tippe auf \"Verbinden\" und anschließend auf \"Fertig\".</p>",
+            "text_size": 1,
+            "text_columns": 2,
+            "align_text": "text-left",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "caps--link",
+            "text_color": "text--neutral",
+            "bg_color": "#f7f7f7"
+          }
+        }
+      },
+      "block_order": [
+        "b496aaab-3e3e-4e3b-97a6-9ca0a04f807a",
+        "text"
+      ],
+      "disabled": true,
+      "settings": {
+        "height": "use_screen_one_fifth",
+        "padding": false,
+        "borders": false,
+        "wrapper": false
+      }
+    },
+    "logos": {
+      "type": "section-logos",
+      "blocks": {
+        "logo-0": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo-1": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo-2": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo-3": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo-4": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo-0",
+        "logo-1",
+        "logo-2",
+        "logo-3",
+        "logo-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "bg": "palette--light bg--neutral"
+      }
+    },
+    "16433200289ed98a4b": {
+      "type": "section-slideshow",
+      "blocks": {
+        "1643320028fd7d899f-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/model-in-heels-and-overalls-with-blue.jpg",
+            "bg_position": "center-center",
+            "overlay_opacity": 15,
+            "overlay_color": "#000000",
+            "kicker": "Das sagen unsere Kunden über uns",
+            "title": "",
+            "richtext": "<h5>\"Endlich wieder meine Lieblingssongs hören\" </h5><p> – Ich habe meine AirPods 2. Generation in der Waschmaschine mitgewaschen und bin super froh OneEarPod gefunden zu haben. Ich brauche einfach die Musik wenn ich Zuhause bin. </p>",
+            "text_align": "align--middle-left",
+            "text_color": "text--white",
+            "link_text": "Airpods ansehen",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        },
+        "1643320028fd7d899f-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/person-writing-in-notebook-beside-laptop-working-from-bed.jpg",
+            "bg_position": "center-center",
+            "overlay_opacity": 15,
+            "overlay_color": "#000000",
+            "kicker": "Das sagen unsere Kunden über uns",
+            "title": "",
+            "richtext": "<h3>\"Kein meeting ohne meine AirPods\"</h3><p>Meist benutzte ich während meinen Terminen im Home Office nur einen Kopfhörer im Ohr. Diese Gewohnheit hat  leider dazu geführt, dass ich meinen rechten AirPod Pro verloren habe. Zum Glück gibt es einen Anbieter bei dem man einen einzelnen Airpod kaufen kann. </p>",
+            "text_align": "align--top-center",
+            "text_color": "text--white",
+            "link_text": "Airpods ansehen",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        },
+        "8347ca4e-bfc0-497e-9e71-193d52dc53f1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/woman-hugs-other-woman-from-behind.jpg",
+            "bg_position": "center-center",
+            "overlay_opacity": 15,
+            "overlay_color": "#000000",
+            "kicker": "Das sagen unsere Kunden über uns",
+            "title": "",
+            "richtext": "<h3>\"Zu Zweit macht es mehr spaß\"</h3><p>Ob am Telefon, in der Stadt, auf dem weg in die Schule oder einfach nur unterwegs. Ich höre am liebsten Musik zusammen mit meinen Freunden. </p>",
+            "text_align": "align--middle-right",
+            "text_color": "text--white",
+            "link_text": "Airpods ansehen",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        },
+        "6e7bf1c2-6cc3-4f36-8eb6-560f93c44d1f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/woman-tilts-her-head-back-and-smiles-outdoors.jpg",
+            "bg_position": "center-center",
+            "overlay_opacity": 15,
+            "overlay_color": "#000000",
+            "kicker": "Das sagen unsere Kunden über uns",
+            "title": "",
+            "richtext": "<h3>\"Freude bei jedem Erlebnis\"</h3><p>Musik und somit meine AirPods sind stetiger Begleiter meines Lebens geworden. Ich nehme sie auf alle Ausflüge mit. Kein Wunder, dass mir da mal einer abhanden kommt. Als ich auf OneEarPod gestoßen bin, fand ich es klasse bei meinem Kauf die Umwelt zu schonen. </p>",
+            "text_align": "align--middle-left",
+            "text_color": "text--white",
+            "link_text": "Airpods ansehen",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        },
+        "9f1f8a4a-e8fc-498b-844a-97ba0a2866c8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/one-arm-push-up.jpg",
+            "bg_position": "center-center",
+            "overlay_opacity": 15,
+            "overlay_color": "#000000",
+            "kicker": "das sagen unsere Kunden über uns",
+            "title": "",
+            "richtext": "<h3>\"Swimming, running, cycling!\"</h3><p>Ich trainiere täglich für meinen Triathlon. An einem schwierigen Tag greife ich für meine Motivation oft zu meinen AirPods. Sie helfen mir abzuschalten & mich voll und ganz auf das Training zu konzentrieren.</p>",
+            "text_align": "align--middle-right",
+            "text_color": "text--white",
+            "link_text": "Airpods ansehen",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        }
+      },
+      "block_order": [
+        "1643320028fd7d899f-0",
+        "1643320028fd7d899f-1",
+        "8347ca4e-bfc0-497e-9e71-193d52dc53f1",
+        "6e7bf1c2-6cc3-4f36-8eb6-560f93c44d1f",
+        "9f1f8a4a-e8fc-498b-844a-97ba0a2866c8"
+      ],
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 3,
+        "height": "use_screen_two_thirds"
+      }
+    },
+    "1643317184c4b4d974": {
+      "type": "section-gallery-text",
+      "blocks": {
+        "16433171840161c721-0": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "",
+            "text_align": "text-left"
+          }
+        }
+      },
+      "block_order": [
+        "16433171840161c721-0"
+      ],
+      "settings": {
+        "bg": "palette--light bg--neutral"
+      }
+    },
+    "16433173858913cebb": {
+      "type": "section-double",
+      "blocks": {
+        "1643317385da190c95-0": {
+          "type": "text",
+          "settings": {
+            "kicker": "OneEarPod schont nicht nur dein Geldbeutel, sondern Du machst mit jedem Kauf etwas Gutes für unsere Umwelt.",
+            "title": "OneEarPod",
+            "text": "<p>Du hast deinen AirPod verloren, er ist Dir kaputt gegangen oder er hat einfach den Geist aufgeben und befindet sich außerhalb der Garantie? Dann bist Du bei OneEarPod genau richtig. Unser Team kennt das Problem gut - wir haben selber öfter unsere AirPods verloren. Nach längerer Recherche nach einem passenden Anbieter war uns die Frustration nur ins Auge geschrieben. Schnell hat es uns dazu gebracht OneEarPod ins leben zu rufen. </p><p>Wir bieten Dir die Möglichkeit, ohne großen Aufwand und ohne Investment in ein neues vollständiges Set, dein bestehendes im vollem Umfang weiterhin zu verwenden. Bei uns kannst Du ganz einfach die fehlende Komponente ersetzen. Das spart Dir nicht nur eine menge Geld, sondern Du unterstützt ganz aktiv Deine Umwelt indem weniger überflüssige Teile produziert werden. </p>",
+            "text_size": 1,
+            "text_columns": 2,
+            "align_text": "text-center",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "caps--link",
+            "text_color": "text--neutral",
+            "bg_color": "#ffffff"
+          }
+        },
+        "1643317385da190c95-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/multitasking-at-desk.jpg",
+            "bg_position": "center-center",
+            "overlay_opacity": 15,
+            "overlay_color": "#000000",
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "Jetzt einkaufen",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "1643317385da190c95-0",
+        "1643317385da190c95-1"
+      ],
+      "settings": {
+        "height": "use_screen_one_third",
+        "padding": false,
+        "borders": false,
+        "wrapper": false
+      }
+    },
+    "16432702022b5a29b1": {
+      "type": "section-collection-grid",
+      "blocks": {
+        "1643270202ee187614-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "title": "Featured collection",
+            "link_text": "View products",
+            "button_link": ""
+          }
+        },
+        "1643270202ee187614-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "title": "Featured collection",
+            "link_text": "View products",
+            "button_link": ""
+          }
+        },
+        "ed1baff7-344c-4235-9e49-8dc4921653e1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "title": "Featured collection",
+            "link_text": "View products",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1643270202ee187614-0",
+        "1643270202ee187614-1",
+        "ed1baff7-344c-4235-9e49-8dc4921653e1"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Collection list",
+        "grid": 2,
+        "bg": "palette--light bg--neutral",
+        "text_color": "text--white",
+        "button_style": "btn--outline",
+        "button_color": "btn--white",
+        "overlay_opacity": 15,
+        "overlay_color": "#000000",
+        "aspect_ratio": 0.7
+      }
+    },
+    "1643317266d3649ed5": {
+      "type": "section-columns",
+      "blocks": {
+        "16433172666686c28c-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "title": "Feature images or videos",
+            "text": "<p>Add a video popup link to show a play button.  Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "button_label": "",
+            "button_link": "",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16433172666686c28c-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "title": "Feature images or videos",
+            "text": "<p>Add a video popup link to show a play button.  Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "button_label": "",
+            "button_link": "",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16433172666686c28c-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "title": "Feature images or videos",
+            "text": "<p>Add a video popup link to show a play button.  Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "button_label": "",
+            "button_link": "",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "16433172666686c28c-0",
+        "16433172666686c28c-1",
+        "16433172666686c28c-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Text columns with images",
+        "bg": "palette--light bg--neutral",
+        "align_text": "text-center",
+        "scale_image": true,
+        "aspect_ratio": 0.5
+      }
+    },
+    "1643317279866b54b9": {
+      "type": "section-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured Products",
+        "collection": "",
+        "grid": 3,
+        "rows": 1,
+        "bg": "palette--light bg--neutral",
+        "show_view_all": false
+      }
+    },
+    "164331734819728102": {
+      "type": "section-gallery",
+      "blocks": {
+        "16433173475fc8ed71-0": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "16433173475fc8ed71-1": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "16433173475fc8ed71-2": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16433173475fc8ed71-0",
+        "16433173475fc8ed71-1",
+        "16433173475fc8ed71-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "padding": true,
+        "scale_image": true,
+        "aspect_ratio": 1,
+        "bg": "palette--light bg--neutral"
+      }
+    },
+    "164331973594aa4153": {
+      "type": "section-double",
+      "blocks": {
+        "1643319735a49b536c-0": {
+          "type": "text",
+          "settings": {
+            "kicker": "Das sagen unsere Kunden",
+            "title": "",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "text_size": 2,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "caps--link",
+            "text_color": "text--neutral",
+            "bg_color": "#ffffff"
+          }
+        },
+        "1643319735a49b536c-1": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 15,
+            "overlay_color": "#000000",
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "Shop Now",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "1643319735a49b536c-0",
+        "1643319735a49b536c-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "height": "use_screen_one_third",
+        "padding": false,
+        "borders": false,
+        "wrapper": false
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "tabs",
+    "171886996353c49940",
+    "icons",
+    "section_html_PxAWMr",
+    "1643270466d6e8eb24",
+    "1643324663adff0e59",
+    "double",
+    "logos",
+    "16433200289ed98a4b",
+    "1643317184c4b4d974",
+    "16433173858913cebb",
+    "16432702022b5a29b1",
+    "1643317266d3649ed5",
+    "1643317279866b54b9",
+    "164331734819728102",
+    "164331973594aa4153"
+  ]
+}

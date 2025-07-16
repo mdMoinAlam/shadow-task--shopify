@@ -1,0 +1,45 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "index.json",
+  "context": {
+    "market": "de"
+  },
+  "sections": {
+    "section_html_rmThX": {
+      "type": "section-html",
+      "disabled": false,
+      "settings": {
+        "html": "<!-- Begin eTrusted bootstrap tag -->\n<script src=\"https://integrations.etrusted.com/applications/widget.js/v2\" defer async></script>\n<!-- End eTrusted bootstrap tag -->\n<!-- Begin eTrusted widget tag -->\n<etrusted-widget data-etrusted-widget-id=\"wdg-5d40be44-5737-421c-996d-b414bb08cfe7\"></etrusted-widget>\n<!-- End eTrusted widget tag -->",
+        "full_width": true
+      },
+      "blocks": {},
+      "block_order": []
+    }
+  },
+  "order": [
+    "hero",
+    "tabs",
+    "icons",
+    "section_html_rmThX",
+    "1643270466d6e8eb24",
+    "1643324663adff0e59",
+    "double",
+    "logos",
+    "16433200289ed98a4b",
+    "1643317184c4b4d974",
+    "16433173858913cebb",
+    "16432702022b5a29b1",
+    "1643317266d3649ed5",
+    "1643317279866b54b9",
+    "164331734819728102",
+    "164331973594aa4153"
+  ]
+}

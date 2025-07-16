@@ -1,0 +1,253 @@
+<div class = "odv_page_width odv_anleitung_container">
+  <div class = "odv_anleitung_left">
+    <div class = "odv_title odv_color_white odv_invisible_mobile" style = "color:white;">{{ section.settings.title }}</div>
+    <div class = "odv_title odv_color_white odv_invisible_mobile" style = "color:white;">{{ section.settings.title2 }}</div>
+    <div class = "odv_anleitung_text_container">
+      <div class = "odv_anleitung_line"></div>
+      <div class = "odv_anleitung_text_col">
+        <div class = "odv_anleitung_number">1</div>
+        <div class = "odv_text odv_color_white">{{ section.settings.text1 }}</div>
+      </div>
+      <div class = "odv_anleitung_text_col">
+        <div class = "odv_anleitung_number">2</div>
+        <div class = "odv_text odv_color_white">{{ section.settings.text2 }}</div>
+      </div>
+      <div class = "odv_anleitung_text_col">
+        <div class = "odv_anleitung_number">3</div>
+        <div class = "odv_text odv_color_white">{{ section.settings.text3 }}</div>
+      </div>
+      <div class = "odv_anleitung_text_col">
+        <div class = "odv_anleitung_number">4</div>
+        <div class = "odv_text odv_color_white">{{ section.settings.text4 }}</div>
+      </div>
+       <div class = "odv_anleitung_text_col">
+        <div class = "odv_anleitung_number">5</div>
+        <div class = "odv_text">{{ section.settings.text5 }}</div>
+      </div>
+       <div class = "odv_anleitung_text_col">
+        <div class = "odv_anleitung_number">6</div>
+        <div class = "odv_text">{{ section.settings.text6 }}</div>
+      </div>
+       <div class = "odv_anleitung_text_col">
+        <div class = "odv_anleitung_number">7</div>
+        <div class = "odv_text">{{ section.settings.text7 }}</div>
+      </div>
+       <div class = "odv_anleitung_text_col">
+        <div class = "odv_anleitung_number">8</div>
+        <div class = "odv_text">{{ section.settings.text8 }}</div>
+      </div>
+       <div class = "odv_anleitung_text_col">
+        <div class = "odv_anleitung_number">9</div>
+        <div class = "odv_text">{{ section.settings.text9 }}</div>
+      </div>
+    </div>
+  </div>
+  <div class = "odv_anleitung_right">
+    <div class = "odv_title odv_invisible_desktop" style = "color:white; text-align:center;">{{ section.settings.title }}</div>
+    <div class = "odv_title odv_invisible_desktop" style = "color:white; text-align:center;">{{ section.settings.title2 }}</div>
+    <div class = "odv_anleitung_img">
+      <img src = "{{ section.settings.img | img_url: '500x' }}">
+    </div>
+  </div>
+</div>
+
+<style>
+.odv_anleitung_line {
+    display: block!important;
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    border: 1px solid lightgrey;
+    height: calc(100% - 20px);
+}
+.odv_anleitung_container {
+    display: flex;
+    flex-direction: row-reverse;
+    background: linear-gradient(180deg, black 50%, white 50%);
+    width: 100%;
+    padding: 5rem;
+    justify-content: center;
+}
+  .odv_anleitung_text_col{
+    display: flex;
+    gap: 10px;
+  }
+
+  .odv_anleitung_text{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .odv_anleitung_number {
+    background: lightgrey;
+    border-radius: 116px;
+    display: flex;
+    width: 50%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    max-width: 30px;
+    z-index: 2;
+}
+  .odv_anleitung_text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+
+}
+  .odv_anleitung_text_col {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+  .odv_anleitung_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 1025px){
+  .odv_anleitung_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  .odv_color_white{
+    color: white;
+  }
+  .odv_anleitung_left {
+    width: 770px;
+    padding: 3rem;
+}
+  .odv_anleitung_text_container {
+    margin-top: 20px;
+}
+
+}
+
+  @media (min-width: 768px) and (max-width: 1024px){
+     .odv_anleitung_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+      .odv_color_white{
+    color: white;
+  }
+      .odv_anleitung_text_container {
+    margin-top: 20px;
+}
+      .odv_anleitung_container {
+    padding: 2rem;
+
+}
+  }
+
+   @media (max-width: 767px){
+.odv_anleitung_container {
+    flex-direction: column-reverse;
+    background: linear-gradient(180deg, black 26%, white 28%);
+    width: 100%;
+    padding: 1rem;
+}
+     .odv_anleitung_number {
+    background: black;
+       color: #2A98EA;
+}
+     .odv_anleitung_line {
+    border: 1px solid black;
+}
+     .odv_anleitung_right img {
+    width: 100%;
+}
+     .odv_anleitung_img {
+    width: 50%;
+    margin: 0 auto;
+}
+     .odv_anleitung_title.odv_invisible_desktop {
+    color: white;
+    text-align: center;
+}
+   }
+</style>
+
+
+{% schema %}
+  {
+    "name": "odv_anleitung",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "title2",
+        "label": "Title2"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "text1",
+        "label": "Schritt 1"
+      },
+            {
+        "type": "text",
+        "id": "text2",
+        "label": "Schritt 2"
+      },
+            {
+        "type": "text",
+        "id": "text3",
+        "label": "Schritt 3"
+      },
+                  {
+        "type": "text",
+        "id": "text4",
+        "label": "Schritt 4"
+      },
+      {
+        "type": "text",
+        "id": "text5",
+        "label": "Schritt 5"
+      },
+      {
+        "type": "text",
+        "id": "text6",
+        "label": "Schritt 6"
+      },
+      {
+        "type": "text",
+        "id": "text7",
+        "label": "Schritt 7"
+      },
+      {
+        "type": "text",
+        "id": "text8",
+        "label": "Schritt 8"
+      },
+      {
+        "type": "text",
+        "id": "text9",
+        "label": "Schritt 9"
+      }
+    ],
+    "presets": [
+      {
+        "name": "odv_anleitung"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

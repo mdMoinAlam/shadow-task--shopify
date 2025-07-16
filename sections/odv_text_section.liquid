@@ -1,0 +1,49 @@
+{% if section.settings.title != "" %}
+<div class = "odv_text_section_container">
+  <div class = "odv_title">{{ section.settings.title }}</div>
+  <div class = "odv_text">{{ section.settings.text }}</div>
+</div>
+
+<style>
+.odv_text_section_container {
+    max-width: 1200px;
+    margin: 0 5rem 5rem;
+}
+
+  @media (max-width: 767px){
+    .odv_text_section_container {
+    max-width: 1200px;
+    margin: 2rem;
+}
+  }
+</style>
+
+  {% endif %}
+{% schema %}
+  {
+    "name": "odv_text_section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "odv_text_section"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

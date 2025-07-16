@@ -1,0 +1,41 @@
+{% comment %}
+  This snippet loops over a collection metafield: collection_button_list (type: metaobject list)
+  Each metaobject includes: button_label, button_icon, button_primary_url, etc.
+  It highlights the active collection.
+{% endcomment %}
+
+{% assign buttons = collection.metafields.custom.collection_button_list.value %}
+
+{% if buttons != blank %}
+  <div class="collection__button__list">
+    {% for button in buttons %}
+      {% assign custom_collection = button.button_primary_url.value %}
+      {% if custom_collection != null %}
+        {% assign custom_collection_handle = custom_collection.handle %}
+
+        {% assign primary_collection = button.button_primary_url.value %}
+        {% assign revert_collection = button.button_revert_url.value %}
+
+        {% assign is_active = false %}
+        {% if collection.handle == primary_collection.handle %}
+          {% assign is_active = true %}
+        {% endif %}
+
+        <a
+          href="{% if is_active %}{{ revert_collection.url }}{% else %}{{ primary_collection.url }}{% endif %}"
+          class="collection__button{% if is_active %} collection__button--active{% endif %}"
+        >
+          {% if is_active %}
+            <img src="{{ button.cross_icon | image_url: width: auto  }}" width="" height="">
+          {% endif %}
+          <div class="button-content">
+            <img src="{{ button.button_icon | image_url: width: auto  }}" width="" height="">
+            <div class="label">
+              <p>{{ button.button_label | escape }}</p>
+            </div>
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

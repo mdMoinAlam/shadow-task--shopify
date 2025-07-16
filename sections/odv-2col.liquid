@@ -1,0 +1,456 @@
+{% if section.settings.ltitle1 != "" %}
+<div class = "odv_page_width">
+  <div class = "odv_2col_container">
+    <div class = "odv_2col_left">
+      <div class = "odv_2col_left_container">
+        <div class = "odv_2col_left_top">
+          <div class = "odv_title">{{ section.settings.ltitle1 }}</div>
+          <div class = "odv_text">{{ section.settings.ltext1 }}</div>
+          <div class = "odv_2col_desktop .odv_invisible_mobile">
+
+<nav class="accordion arrows">
+
+  {% if section.settings.subtitle1 != "" %}
+    <input
+      type="radio"
+      name="accordion"
+      id="cb1"
+       />
+    <section class="box">
+      <label class="box-title odv_subtitle" for="cb1">{{ section.settings.subtitle1 }}</label>
+      <label class="box-close" for="acc-close"></label>
+      <div class="box-content odv_text">{{ section.settings.text1 }}</div>
+    </section>
+  {% endif %}
+
+   {% if section.settings.subtitle2 != "" %}
+    <input
+      type="radio"
+      name="accordion"
+      id="cb2"
+       />
+    <section class="box">
+      <label class="box-title odv_subtitle" for="cb2">{{ section.settings.subtitle2 }}</label>
+      <label class="box-close" for="acc-close"></label>
+      <div class="box-content odv_text">{{ section.settings.text2 }}</div>
+    </section>
+  {% endif %}
+  
+   {% if section.settings.subtitle3 != "" %}
+    <input
+      type="radio"
+      name="accordion"
+      id="cb3"
+      />
+    <section class="box">
+      <label class="box-title odv_subtitle" for="cb3">{{ section.settings.subtitle3 }}</label>
+      <label class="box-close" for="acc-close"></label>
+      <div class="box-content odv_text">{{ section.settings.text3 }}</div>
+    </section>
+  {% endif %}
+
+
+
+
+  <input
+    type="radio"
+    name="accordion"
+    id="acc-close" />
+</nav>
+
+
+            
+          </div>
+        </div>
+  {% if section.settings.ltitle2 != "" %}
+        <div class = "odv_2col_left_middle">
+                <div class = "odv_title">{{ section.settings.ltitle2 }}</div>
+          <div class = "odv_text">{{ section.settings.ltext2 }}</div>
+        </div>
+    {% endif %}
+  {% if section.settings.ltitle3 != "" %}
+        <div class = "odv_2col_left_bottom">
+                <div class = "odv_title">{{ section.settings.ltitle3 }}</div>
+          <div class = "odv_text">{{ section.settings.ltext3 }}</div>
+        </div>
+    {% endif %}
+      </div>
+    </div>
+    <div class = "odv_2col_right"  style = "position: relative;">
+      <div class = "odv_2col_right_container">
+        <div class = "odv_2col_right_trigger_container">
+          <div class = "odv_2col_right_text ">
+            <div class = "odv_title">{{ section.settings.rtitle1 }}</div>
+            <div class = "odv_text">{{ section.settings.rtext1 }}</div>
+            <div class = "odv_2col_trigger">weiterlesen..</div>
+          </div>
+        </div>
+        {% if section.settings.img %}
+      <img src = "{{ section.settings.img | img_url: '400x' }}">
+          {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $(document).ready(function(){
+     var odv_2col_height = $(".odv_2col_right_text").outerHeight();
+
+   if ($(window).width() < 767){
+       var odv_2col_max_height  = 250;
+     }else if ($(window).width() >= 768 && $(window).width() <= 1024){
+       var odv_2col_max_height  = 300;
+    } else {
+      var odv_2col_max_height  = 500;
+    } 
+
+    if (odv_2col_height >= odv_2col_max_height) {
+      $(".odv_2col_trigger").show();
+        if ($(window).width() < 767){
+         $(".odv_2col_right").css("padding", "25px 20px 50px");
+     }
+    
+} 
+  });
+
+  $(".odv_2col_trigger").click(function(){
+    $(".odv_2col_right_text").toggleClass('odv_2col_no_collapsed');
+
+     if($(this).hasClass("odv_opened")){
+    $(this).removeClass("odv_opened");
+    $(this).html("weiterlesen..");
+  } else {
+    $(this).addClass("odv_opened");
+    $(this).html("weniger..");
+  }
+  });
+
+</script>
+
+
+<style>
+  label.box-title.odv_subtitle {
+    font-weight: 600;
+}
+  .odv_2col_left_middle, .odv_2col_left_bottom {
+    padding-top: 2rem;
+}
+  .odv_2col_right img {
+    padding-top: 2rem;
+}
+  .odv_2col_right_text{
+    overflow: hidden;
+     max-height: 400px;
+  }
+  .odv_2col_no_collapsed {
+    max-height: 100%!important;
+  }
+.odv_2col_trigger {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+      font-weight: 800;
+    cursor: pointer;
+    font-family: var(---font-stack-heading);
+}
+.odv_2col_container {
+    margin: 0 auto;
+    display: flex;
+    padding: 5rem 0 0;
+    flex-direction: column-reverse;
+}
+.odv_2col_right {
+  position:relative;
+    background: black;
+    padding: 5rem;
+    margin-left: 5rem;
+    color: white;
+    border-radius: 12px 0 0 12px;
+}
+.odv_2col_left {
+    margin: 5rem;
+}
+  .odv_2col_right_container {
+    max-width: 1200px;
+    padding-right: 10px;
+}
+  .odv_2col_right img {
+    padding-top: 2rem;
+    position: absolute;
+    right: 0;
+    bottom: -82px;
+    width: 200px;
+}
+
+@media (max-width: 767px){
+   .odv_2col_right_text {
+    max-height: 250px;
+  }
+  .odv_2col_container {
+    padding: 2rem 0 0;
+}
+.odv_2col_right {
+    padding: 25px 20px;
+    margin-left: 10px;
+    width: unset;
+}
+
+  .odv_2col_left {
+    margin: 2rem;
+    margin-top: 4rem;
+}
+  .odv_2col_right img {
+    padding-top: 2rem;
+    position: absolute;
+    width: 120px;
+    right: 0;
+    bottom: -50px;
+}
+  
+}
+
+  @media (min-width:768px) and (max-width:1024px){
+  .odv_2col_right {
+    width: unset;
+}
+    
+  }
+  @media (min-width: 1600px){
+    .odv_2col_right {
+    background: black;
+    width: 100%;
+    padding: 5rem 5rem 0;
+    margin-left: 20rem;
+    color: white;
+    border-radius: 12px 0 0 12px;
+}
+    .odv_2col_container {
+    margin: 0 auto;
+    display: flex;
+    padding-top: 10rem;
+}
+    .odv_2col_left {
+    margin-top: 10rem;
+}
+  }
+
+  /* ACCORDIN */
+
+  .accordion {
+    margin: 20px auto;
+
+  }
+  .accordion input {
+    display: none;
+  }
+  .box {
+    position: relative;
+    background: white;
+    height: 64px;
+    transition: all 0.15s ease-in-out;
+  }
+  .box::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    border-bottom: 1px solid lightgrey;
+  }
+  header.box {
+    background: #00BCD4;
+    z-index: 100;
+    cursor: initial;
+    box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px -2px rgba(0, 0, 0, 0.12), 0 2px 4px -4px rgba(0, 0, 0, 0.24);
+  }
+  header .box-title {
+    margin: 0;
+    font-weight: normal;
+    font-size: 16pt;
+    color: white;
+    cursor: initial;
+  }
+  .box-title {
+    width: calc(100% - 40px);
+    height: 64px;
+    line-height: 64px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+.box-content {
+    width: calc(100% );
+    padding: 10px;
+    font-size: 11pt;
+    color: rgba(0, 0, 0, 0.54);
+    display: none;
+}
+
+
+  .box-close {
+    position: absolute;
+    height: 64px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+  }
+  input:checked + .box {
+    height: auto;
+
+  }
+  input:checked + .box .box-title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  input:checked + .box .box-content,
+  input:checked + .box .box-close {
+    display: inline-block;
+  }
+  .arrows section .box-title {
+    width: 100%;
+  }
+.arrows section .box-title:before {
+    position: absolute;
+    display: block;
+    content: '\203a';
+    transform: rotate(90deg);
+    font-size: 35pt;
+    right: 10px;
+    transition: transform 0.15s ease-in-out;
+    color: rgba(0, 0, 0, 0.54);
+}
+  input:checked + section.box .box-title:before {
+    transform: rotate(270deg) translateY(-10px);
+  }
+
+
+
+  @media(max-width: 1024px) {
+    .arrows section .box-title {
+      font-size: 12px;
+      width: 100%;
+      height: 60px;
+      line-height: 15px;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+    }
+
+    .arrows section .box-title:before {
+    position: absolute;
+    display: block;
+    content: '\203a';
+    transform: rotate(90deg);
+    font-size: 25pt;
+    right: 0px;
+    transition: transform 0.15s ease-in-out;
+    color: rgba(0, 0, 0, 0.54);
+}
+  }
+</style>
+{% endif %}
+  
+{% schema %}
+  {
+    "name": "odv_2col",
+    "settings": [
+      {
+        "type": "text",
+        "id": "ltitle1",
+        "label": "Left Title 1"
+      },
+      {
+        "type": "richtext",
+        "id" : "ltext1",
+        "label": "Left Text 1"
+      },
+      {
+        "type": "text",
+        "id": "subtitle1",
+        "label": "Left Subtitle1"
+      },
+      {
+        "type": "richtext",
+        "id": "text1",
+        "label": "Left Text 1"
+      },
+            {
+        "type": "text",
+        "id": "subtitle2",
+        "label": "Left Subtitle2"
+      },
+      {
+        "type": "richtext",
+        "id": "text2",
+        "label": "Left Text 2"
+      },
+            {
+        "type": "text",
+        "id": "subtitle3",
+        "label": "Left Subtitle3"
+      },
+      {
+        "type": "richtext",
+        "id": "text3",
+        "label": "Left Text 3"
+      },
+       {
+        "type": "text",
+        "id": "ltitle2",
+        "label": "Left Title 2"
+      },
+      {
+        "type": "richtext",
+        "id" : "ltext2",
+        "label": "Left Text 2"
+      },
+       {
+        "type": "text",
+        "id": "ltitle3",
+        "label": "Left Title 3"
+      },
+      {
+        "type": "richtext",
+        "id" : "ltext3",
+        "label": "Left Text 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Left Image"
+      },
+       {
+        "type": "text",
+        "id": "rtitle1",
+        "label": "Right Title 1"
+      },
+      {
+        "type": "richtext",
+        "id" : "rtext1",
+        "label": "Right Text 1"
+      }
+    ],
+    "presets": [
+      {
+        "name": "odv_2col"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

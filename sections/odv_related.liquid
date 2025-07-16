@@ -1,0 +1,123 @@
+<!-- /sections/related.liquid -->
+
+{%- assign has_related_products = section.settings.related_products_enable -%}
+{%- assign has_recently_products = section.settings.show_recently_viewed -%}
+
+{%- if has_related_products and product.collections.size < 1 -%}
+  {% assign has_related_products = false %}
+{%- endif -%}
+
+{% if has_related_products or has_recently_products %}
+  <div id = "odv_related" class=" js " style = "background: black;"data-section-id="{{ section.id }}" data-section-type="related">
+    <div class="wrapper">
+      <div class="collection-tabs">
+      
+      
+      
+          <div class="related__products" data-tabs-holder>    
+            <div class=" tabs__recommendation" data-tab-index="0">
+              <div data-related-section data-limit="{{ section.settings.limit }}" data-product-id="{{ product.id }}">
+                {%- render 'products-recommendation', product: product -%}
+              </div>
+            </div>
+      
+            <div class="tab-content tab-content-1 tabs__recently-viewed hide" data-tab-index="1" data-recently-viewed-tab></div>
+          </div>
+      
+       
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "odv Product recomms",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "You might also like"
+    },
+    {
+      "type": "select",
+      "id": "bg",
+      "label": "Background color",
+      "default": "palette--light bg--neutral",
+      "options": [
+        { "value": "palette--light bg--neutral", "label": "Default"},
+        { "value": "palette--light bg--accent", "label": "Light"},
+        { "value": "palette--dark bg--invert", "label": "Dark"},
+        { "value": "palette--dark bg--invert--accent", "label": "Dark accent"}
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Related products"
+    },
+    {
+      "type": "checkbox",
+      "id": "related_products_enable",
+      "label": "Show related products",
+      "info": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)",
+      "default": true
+    },
+    {
+      "type":    "range",
+      "id":      "limit",
+      "min":     1,
+      "max":     8,
+      "step":    1,
+      "label":   "Product limit",
+      "default": 6
+    },
+    {
+      "type": "text",
+      "id": "product_recommendations_heading",
+      "label": "Heading",
+      "default": "Related products"
+    },
+    {
+      "type": "header",
+      "content": "Recently viewed products"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_recently_viewed",
+      "label": "Enable recently viewed products",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "product_recently_limit",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "Product limit",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "product_recently_minimum",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "Display threshold",
+      "info": "Hide section until a minimum of products can be shown.",
+      "default": 4
+    },
+    {
+      "type": "text",
+      "id": "product_recently_heading",
+      "label": "Heading",
+      "default": "Recently viewed"
+    }
+  ],
+  "presets": [
+    {
+      "name": "odv prod recomms"
+    }
+  ]
+}
+{% endschema %}

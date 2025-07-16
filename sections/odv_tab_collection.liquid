@@ -1,0 +1,126 @@
+
+{%- for block in section.blocks -%}
+  {%- assign featured_collection = collections[block.settings.collection] -%}
+  {%- assign featured_collection_title = block.settings.title | default: featured_collection.title | default: 'Collection' -%}
+
+
+
+  {%- capture tabs -%}
+    {{ tabs }}
+    <div class="">
+      <div class="flickity-grid" data-slider data-grid-large="{{ section.settings.grid }}">
+        <!-- /snippets/product-grid-item.liquid -->
+        {% for product in featured_collection.products limit: section.settings.limit %}
+          <div class="product-grid-slide">
+            {% render 'product-grid-item', product: product %}
+          </div>
+        {% else %}
+          {% render 'onboarding-product-grid-item', limit: section.settings.limit, wrap: 'product-grid-slide' %}
+        {% endfor %}
+      </div>
+    </div>
+  {%- endcapture -%}
+{%- endfor -%}
+
+
+<div id = "odv_collection" style = "background:black;  visibility: hidden; "
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-tabs">
+  <div class="wrapper" data-tabs-holder>
+    <div class="collection-tabs">
+
+  
+      {{ tabs }}
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $("#odv_collection").hide();
+    $("#odv_collection").css("visibility", "visible");
+
+  });
+</script>
+{% schema %}
+{
+  "name": " odv Tab collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Tab collections"
+    },
+    {
+      "type":    "range",
+      "id":      "grid",
+      "min":     1,
+      "max":     6,
+      "step":    1,
+      "default": 3,
+      "label":   "Products per row"
+    },
+    {
+      "type":    "range",
+      "id":      "limit",
+      "min":     1,
+      "max":     20,
+      "step":    1,
+      "default": 6,
+      "label":   "Product limit",
+      "info": "Loading a large number of products can affect page speed"
+    },
+    {
+      "type": "select",
+      "id": "bg",
+      "label": "Background color",
+      "default": "palette--light bg--neutral",
+      "options": [
+        { "value": "palette--light bg--neutral", "label": "Default"},
+        { "value": "palette--light bg--accent", "label": "Light"},
+        { "value": "palette--dark bg--invert", "label": "Dark"},
+        { "value": "palette--dark bg--invert--accent", "label": "Dark accent"}
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Tab collections",
+      "settings": [
+        {
+          "label": "Collection",
+          "id": "collection",
+          "type": "collection"
+        },
+        {
+          "label": "Tab heading",
+          "id": "title",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Collection",
+      "name": "odv Tab collections",
+      "blocks": [
+        {
+          "type": "collection",
+          "settings": {
+            "title": "First collection"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "title": "Second collection"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

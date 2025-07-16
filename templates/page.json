@@ -1,0 +1,95 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "settings": {
+        "kicker": "",
+        "show_title": false,
+        "show_content": true,
+        "text_size": 2,
+        "align_text": "text-left",
+        "height": "margin--small",
+        "width": "wrapper",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral"
+      }
+    },
+    "section_icons_7DQY3e": {
+      "type": "section-icons",
+      "blocks": {
+        "icon_block_ff4cYH": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-award",
+            "icon_color": "#aaaaaa",
+            "title": "100% ORIGINALAPPLE",
+            "text": "<p>Vertraue auf Qualität: Bei uns bekommst du garantiert die <strong>originalen AirPods von Apple</strong>. Sei vorsichtig bei anderen Plattformen oder unseriösen Anbietern – oft ist das leider nicht der Fall. Du kannst die Originalität deiner AirPods jederzeit in einem Apple Store überprüfen lassen. Und <strong>falls du nicht überzeugt bist, übernehmen wir die Rücksendekosten!</strong></p>"
+          }
+        },
+        "icon_block_jfYKjB": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-rating",
+            "icon_color": "#aaaaaa",
+            "title": "100% NEU & UNBENUTZT",
+            "text": "<p>Bei uns erhältst du ausschließlich <strong>neue und noch nie benutzte AirPods – garantiert.</strong> Unsere AirPods kommen in versiegelten Originalboxen. Viele Anbieter im Internet verkaufen leider „refurbished“ AirPods als neu – das ist nicht nur unseriös, sondern auch unhygienisch. Solltest du aus irgendeinem Grund nicht überzeugt sein, dass deine Sendung komplett neu ist, <strong>übernehmen wir die Rücksendekosten!</strong></p>"
+          }
+        },
+        "icon_block_NrxaxL": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-lock-shield",
+            "icon_color": "#aaaaaa",
+            "title": "100% KOPPELBAR",
+            "text": "<p>Unsere <strong>originalen Apple Ersatz-AirPods </strong>sind <strong>garantiert</strong> mit deinem bestehenden Set <strong>koppelbar</strong>. Solange du die passende Generation der AirPods bestellst, funktioniert die Kopplung problemlos. Für eine erfolgreiche Einrichtung legen wir jeder Sendung eine Anleitung bei und stellen zusätzlich ein hilfreiches Video zur Verfügung. <strong>Sollte die Kopplung aus irgendeinem Grund dennoch nicht funktionieren, übernehmen wir die Rücksendekosten!</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon_block_ff4cYH",
+        "icon_block_jfYKjB",
+        "icon_block_NrxaxL"
+      ],
+      "settings": {
+        "title": "",
+        "bg": "palette--light bg--neutral",
+        "icon_size": "icon--medium",
+        "icon_alignment": "icon--top",
+        "align_text": "text-center"
+      }
+    },
+    "section_gallery_text_C8mDFa": {
+      "type": "section-gallery-text",
+      "blocks": {
+        "text_Pq6Mr6": {
+          "type": "text",
+          "settings": {
+            "title": "UNSERE GARANTIE",
+            "text": "<p>Solltest du aus irgendeinem Grund nicht überzeugt sein, dass die AirPods <strong>original von Apple, neu oder koppelbar</strong> mit deinem bestehenden Set sind, <strong>erhältst du den vollen Betrag deines Einkaufs zurück.</strong> Wir übernehmen sogar die Rücksendekosten an unser Lager. Auch wenn wir sicher sind, dass du zu 100 % zufrieden sein wirst, kannst du jederzeit von dieser Garantie Gebrauch machen. Schreibe uns einfach eine E-Mail an <a>service@oneearpod.com </a>– wir kümmern uns sofort um dein Anliegen!</p>",
+            "text_align": "text-center"
+          }
+        }
+      },
+      "block_order": [
+        "text_Pq6Mr6"
+      ],
+      "settings": {
+        "bg": "palette--light bg--neutral"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_icons_7DQY3e",
+    "section_gallery_text_C8mDFa"
+  ]
+}

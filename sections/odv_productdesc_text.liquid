@@ -1,0 +1,38 @@
+{% if product.metafields.custom.less_content == true %}
+<div class = "odv_page_width">
+  <div class = "odv_productdesc_text_container">
+    {{ product.description }}
+  </div>
+</div>
+
+<style>
+
+  .odv_productdesc_text_container {
+    background: white;
+    width: 95%;
+    max-width: 1600px;
+    padding: 5rem 2rem;
+    border-radius: 12px;
+    position: relative;
+    margin: 0 auto;
+}
+</style>
+
+  {% endif %}
+{% schema %}
+  {
+    "name": "odv_productdesc_text",
+    "settings": [],
+    "presets": [
+      {
+        "name": "odv_productdesc_text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

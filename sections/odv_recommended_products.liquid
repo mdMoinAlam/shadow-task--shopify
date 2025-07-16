@@ -1,0 +1,219 @@
+
+
+
+<div class = "odv_page_width" style = "background:black;">
+  <div class = "odv_rp_container">
+    <div class = "odv_title" style = "color: white; text-align:center;">{{ section.settings.title }}</div>
+    <hr>
+    <div class = "odv_rp_choice_container" >
+      <div class = "odv_rp_choice_left odv_rp_choice odv_rp_choice_active" onclick = "left();">{{ section.settings.left }}</div>
+      <div class = "odv_rp_choice_right odv_rp_choice" onclick = "right();">BESTSELLERS</div>    
+    </div>
+
+
+
+
+  </div>
+</div>
+
+<style>
+
+
+
+  
+  .odv_rp_container {
+    padding: 5rem 5rem 0;
+}
+.odv_rp_choice {
+    padding: 6px 30px;
+  cursor: pointer;
+}
+.odv_rp_choice_active {
+    color: #656565;
+    background: #EFEFEF;
+    border-radius: 51px;
+}
+.odv_rp_container hr {
+    clear: both;
+    border-top: solid var(--text);
+    border-width: 3px 0 0;
+    margin: 20px auto;
+    margin-bottom: 50px;
+    height: 0;
+    border-radius: 15px;
+    width: 30px;
+}
+.odv_rp_choice_container {
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    gap: 5px;
+    font-size: 16px;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+}
+  .odv_rp_title {
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+  @media(max-width: 767px) {
+    .odv_rp_container {
+      background: black;
+      color: white;
+    }
+    .odv_rp_choice_container {
+    max-width: 90%;
+    padding-bottom: 2rem;
+}
+.odv_rp_container {
+    padding: 2rem 10px;
+}
+    .odv_rp_choice {
+    padding: 1px 20px;
+    cursor: pointer;
+}
+    .odv_rp_container hr {
+
+    margin: 30px auto;
+
+}
+  }
+</style>
+
+<script>
+  function left(){
+    $(".odv_rp_choice_active").removeClass("odv_rp_choice_active");
+    $(".odv_rp_choice_left").addClass("odv_rp_choice_active");
+    $("#odv_related").show();
+    $("#odv_collection").hide();
+  }
+  function right(){
+    $(".odv_rp_choice_active").removeClass("odv_rp_choice_active");
+    $(".odv_rp_choice_right").addClass("odv_rp_choice_active");
+    $("#odv_related").hide();
+    $("#odv_collection").show();
+  }
+</script>
+
+
+{% schema %}
+  {
+    "name": "odv_recommended_products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "left",
+        "label": "Left Title"
+      },
+      {
+        "type": "text",
+        "id": "right",
+        "label": "Right Title"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+       {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "You might also like"
+    },
+    {
+      "type": "select",
+      "id": "bg",
+      "label": "Background color",
+      "default": "palette--light bg--neutral",
+      "options": [
+        { "value": "palette--light bg--neutral", "label": "Default"},
+        { "value": "palette--light bg--accent", "label": "Light"},
+        { "value": "palette--dark bg--invert", "label": "Dark"},
+        { "value": "palette--dark bg--invert--accent", "label": "Dark accent"}
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Related products"
+    },
+    {
+      "type": "checkbox",
+      "id": "related_products_enable",
+      "label": "Show related products",
+      "info": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)",
+      "default": true
+    },
+    {
+      "type":    "range",
+      "id":      "limit",
+      "min":     1,
+      "max":     8,
+      "step":    1,
+      "label":   "Product limit",
+      "default": 6
+    },
+    {
+      "type": "text",
+      "id": "product_recommendations_heading",
+      "label": "Heading",
+      "default": "Related products"
+    },
+    {
+      "type": "header",
+      "content": "Recently viewed products"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_recently_viewed",
+      "label": "Enable recently viewed products",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "product_recently_limit",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "Product limit",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "product_recently_minimum",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "Display threshold",
+      "info": "Hide section until a minimum of products can be shown.",
+      "default": 4
+    },
+    {
+      "type": "text",
+      "id": "product_recently_heading",
+      "label": "Heading",
+      "default": "Recently viewed"
+    }
+    ],
+  
+    "presets": [
+      {
+        "name": "odv_recommended_products"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

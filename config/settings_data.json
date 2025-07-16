@@ -1,0 +1,758 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "pluginseo_pageTitleTruncateChars": "999",
+    "pluginseo_pageTitleEnableAppender": true,
+    "pluginseo_pageTitleAppenderTemplate": "| %% shop.name %%",
+    "pluginseo_pageTitleAppenderTargetLength": "70",
+    "pluginseo_pageTitleTemplateApplyToAll": true,
+    "pluginseo_pageTitleTruncateEnableForCollections": true,
+    "pluginseo_pageTitleTruncateEnableForProducts": true,
+    "pluginseo_pageTitleTruncateEnableForPages": true,
+    "pluginseo_pageTitleTruncateEnableForArticles": true,
+    "pluginseo_pageTitleTruncateEnableForBlogs": true,
+    "pluginseo_pageTitleDefaultTemplate": "%% page_title %% | Einzelne Airpods und Ladecases | %% shop.name %%",
+    "pluginseo_pageTitleIndexTemplate": "Original Apple AirPods einzeln kaufen | Ersatz AirPods & Cases",
+    "pluginseo_pageTitlePageTemplate": "%%page.title%%",
+    "pluginseo_pageTitleSearchTemplate": "Shop %% search.terms %% at %% shop.name %%",
+    "pluginseo_pageTitleProductTemplate": "%% product.title %%%% product.selected_variant.title || prepend_not_empty: ' ' %%",
+    "pluginseo_pageTitleCollectionTemplate": "%% current_tags%% %%collection.title%%",
+    "pluginseo_pageTitleCatalogTemplate": "%% collection.products || map: 'collections' || map: 'title' || uniq || take: '2' || join: ', '  %%",
+    "pluginseo_pageTitleBlogTemplate": "%% blog.title %%%% blog.all_tags || take: '5' || join: ', ' || prepend_not_empty: ' blog: ' || append_not_empty: ' and more' %%",
+    "pluginseo_pageTitleArticleTemplate": "%% article.title %%%% article.tags || take: '3' || join: ', ' || prepend_not_empty: ' | ' || append_not_empty: ' and more' %%",
+    "pluginseo_pageTitle404Template": "404: Page Not Found - %% shop.name %%",
+    "pluginseo_metaDescriptionTruncateChars": "150",
+    "pluginseo_metaDescriptionTemplateApplyToAll": true,
+    "pluginseo_metaDescriptionTruncateEnableForCollections": true,
+    "pluginseo_metaDescriptionTruncateEnableForProducts": true,
+    "pluginseo_metaDescriptionTruncateEnableForPages": true,
+    "pluginseo_metaDescriptionTruncateEnableForArticles": true,
+    "pluginseo_metaDescriptionTruncateEnableForBlogs": true,
+    "pluginseo_metaDescriptionDefaultTemplate": "%% page_description %% Einzelne Original Apple Airpods und Ladecases preiswert und versandfertig in 24 Stunden",
+    "pluginseo_metaDescriptionIndexTemplate": "Dein Fachhandel für AirPods Ersatzteile. Schnell und einfach einzelne Original AirPods und Ladecases im Onlineshop bestellen. Kostenloser und schneller Versand deutschlandweit innerhalb von 2-4 Tagen. AirPods Pro, AirPods 2. und 3. Generation nur für das rechte oder linke Ohr.",
+    "pluginseo_metaDescriptionPageTemplate": "%% page.content || strip_newlines || strip_html || escape || append_not_empty: '.' %% Visit %% shop.name %%",
+    "pluginseo_metaDescriptionSearchTemplate": "Find %% search.terms || default: 'it' %% here%% search.results || map: 'title' || take: '3' || join: ', ' || prepend_not_empty: ' including ' || append_not_empty: ' and more' %% at %% shop.name %%",
+    "pluginseo_metaDescriptionProductTemplate": "Kostenloser und schneller Versand. Original AirPopds Ersatzteile %% product.description || strip_newlines || replace: '.,', ',' || strip_html || escape %%",
+    "pluginseo_metaDescriptionCollectionTemplate": "%% collection.all_tags || take: '3' || join: ', ' %% %%shop.name%% | Einzelne Original Apple Airpods",
+    "pluginseo_metaDescriptionCatalogTemplate": "%% collection.products || map: 'title' || uniq || take: '3' || join: ', ' || escape %% and more.",
+    "pluginseo_metaDescriptionBlogTemplate": "%% blog.articles || map: 'title' || take: '3' || join: ', ' || prepend_not_empty: 'Read about ' || append_not_empty: ' and more on the '%%%% shop.name %% %% blog.title %% blog.",
+    "pluginseo_metaDescriptionArticleTemplate": "%% article.excerpt_or_content || strip_newlines || strip_html || escape %%%% article.tags || take: '6' || join: ', ' || prepend_not_empty: ' Read about ' || append_not_empty: ' and more' %% %% article.title %% on the %% shop.name %% %% blog.title %% blog",
+    "pluginseo_metaDescription404Template": "The page you requested can't be found, please visit %% shop.domain %% instead",
+    "pluginseo_structuredDataDisplayLogo": true,
+    "pluginseo_structuredDataReviewApp": "autodetect",
+    "color_announcement_bg": "#222324",
+    "color_announcement_text": "#ffffff",
+    "color_header_bg": "#ffffff",
+    "color_header_text": "#656565",
+    "color_nav_border": "#d7d7d7",
+    "color_body_bg": "#ffffff",
+    "color_body_text": "#656565",
+    "color_primary": "#2a98ea",
+    "color_secondary": "#585e71",
+    "color_bg_light": "#f7f7f7",
+    "color_bg_inverse": "#2e3438",
+    "color_text_inverse": "#ffffff",
+    "color_primary_inverse": "#fcd8c8",
+    "color_secondary_inverse": "#c6dae5",
+    "color_bg_accent_inverse": "#222324",
+    "color_footer_bg": "#efefef",
+    "color_footer_text": "#393939",
+    "type_heading_font": "futura_n7",
+    "type_heading_size": 115,
+    "font_title_capitalize": true,
+    "type_accent_font": "itc_johnston_n5",
+    "type_accent_size": 95,
+    "type_base_font": "harmonia_sans_n4",
+    "type_body_size": 100,
+    "button_radius": 0,
+    "animations_scroll_enable": true,
+    "parallax_enable": true,
+    "collection_text_alignment": "text-center",
+    "product_grid_style": "under",
+    "image_hover_enable": true,
+    "product_grid_image": "crop",
+    "product_grid_aspect_ratio": 1,
+    "badge_sale": false,
+    "badge_sale_discount": false,
+    "product_grid_show_rating": false,
+    "cart_style": "drawer",
+    "cart_recommended_collection_heading": "DAS KÖNNTE DIR AUCH GEFALLEN",
+    "cart_recommended_collection": "apple-airpods-ladekabel",
+    "social_facebook_link": "https://www.facebook.com/oneearpod",
+    "favicon": "shopify://shop_images/Screenshot_2022-01-27_at_15.57.50.png",
+    "checkout_logo_image": "shopify://shop_images/Screenshot_2022-01-27_at_15.57.50.png",
+    "product_background_color": "#ffffff",
+    "sections": {
+      "announcement": {
+        "type": "announcement",
+        "blocks": {
+          "announce_text": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "text": "<p><strong>KOSTENLOSER VERSAND</strong> | Deutschlandweit</p>",
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
+          },
+          "announce_shipping": {
+            "type": "message",
+            "disabled": true,
+            "settings": {
+              "message": "NEUERÖFFNUNG || 5 Euro Rabatt auf die erste Bestellung mit Code 'Neu2022'",
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
+          },
+          "f9d1dff4-382c-45c7-b902-7e36028f95b6": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "text": "<p><strong>BLACK WEEKEND SALE</strong> | 5 Euro Rabatt auf ALLES ab 40 Euro '<strong>BLACK5OFF</strong>' | 40% auf alles Zubehör '<strong>BLACK40</strong>' | </p>",
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
+          },
+          "801b28f9-eedc-42a2-a14b-689fa3f916a2": {
+            "type": "text",
+            "settings": {
+              "text": "<p><strong>ORIGINAL APPLE PRODUKTE</strong></p>",
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
+          },
+          "d25a208e-93d7-4c19-a95e-ea2ab7585822": {
+            "type": "text",
+            "settings": {
+              "text": "<p><strong>Versandfertig in 24h</strong></p>",
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
+          },
+          "0bfd807b-03aa-415d-a9b6-e3b90a85c759": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "text": "<p><strong>TWO ARE BETTER THAN ONE 🎧</strong></p>",
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
+          },
+          "9e7ddfd2-93bf-4edd-9982-9f56beb3e7ef": {
+            "type": "text",
+            "settings": {
+              "text": "<p><strong>30 Tage Rückgaberecht</strong></p>",
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
+          },
+          "ce32d5bb-ca8b-44be-a496-1ac8e1d75a27": {
+            "type": "text",
+            "settings": {
+              "text": "<p><strong>Bereits 40.000+ zufriedene Kunden</strong></p>",
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
+          },
+          "42f52d7d-23ef-41dd-ad88-cdcee2c7cb23": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "text": "<p><strong>HERBST SALE:</strong> 30% Rabatt <strong>EXTRA</strong> auf alles Zubehör mit Code \"<strong>FALL30</strong>\" | nur bis Freitag 17. November | <strong>Ab 10 Euro Versandkostenfrei</strong></p>",
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
+          }
+        },
+        "block_order": [
+          "announce_text",
+          "announce_shipping",
+          "f9d1dff4-382c-45c7-b902-7e36028f95b6",
+          "801b28f9-eedc-42a2-a14b-689fa3f916a2",
+          "d25a208e-93d7-4c19-a95e-ea2ab7585822",
+          "0bfd807b-03aa-415d-a9b6-e3b90a85c759",
+          "9e7ddfd2-93bf-4edd-9982-9f56beb3e7ef",
+          "ce32d5bb-ca8b-44be-a496-1ac8e1d75a27",
+          "42f52d7d-23ef-41dd-ad88-cdcee2c7cb23"
+        ],
+        "settings": {
+          "text_size": 3,
+          "layout": "slider",
+          "speed": 3
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "collection_block": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "position": "1",
+              "collection": "",
+              "limit": 4
+            }
+          }
+        },
+        "block_order": [
+          "collection_block"
+        ],
+        "settings": {
+          "header_style": "menu_center",
+          "logo": "shopify://shop_images/Screenshot_2022-01-27_at_15.57.50.png",
+          "logo_max_limit": 60,
+          "main_menu_linklist": "main-menu",
+          "full_width": false,
+          "underline_current": true,
+          "enable_search": true,
+          "enable_account": true,
+          "use_icons": true,
+          "header_sticky": "static",
+          "transparent_home": false,
+          "transparent_collection": false,
+          "transparent_blog": false,
+          "transparent_article": false,
+          "transparent_page": false,
+          "transparent_text_color": "#ffffff"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "d339eb2c-04ff-426d-9fc6-78b74858c344": {
+            "type": "linklist",
+            "settings": {
+              "linklist": "main-menu",
+              "accordion_default": ""
+            }
+          },
+          "linklist": {
+            "type": "linklist",
+            "settings": {
+              "linklist": "hilfe",
+              "accordion_default": ""
+            }
+          },
+          "1a445f48-5e59-439e-9eae-87e90c7d370f": {
+            "type": "linklist",
+            "settings": {
+              "linklist": "footer",
+              "accordion_default": ""
+            }
+          },
+          "78e8c363-8577-41e4-ac31-c1036fb06a80": {
+            "type": "text",
+            "settings": {
+              "title": "Zahlungsmethoden",
+              "text": "<p>Wir akzeptieren PayPal, Kreditkarte, Sofortüberweisung und Klarna Rechnung </p>",
+              "accordion_default": ""
+            }
+          }
+        },
+        "block_order": [
+          "d339eb2c-04ff-426d-9fc6-78b74858c344",
+          "linklist",
+          "1a445f48-5e59-439e-9eae-87e90c7d370f",
+          "78e8c363-8577-41e4-ac31-c1036fb06a80"
+        ],
+        "settings": {
+          "footer_secondary_linklist": "",
+          "footer_payment_enable": false,
+          "footer_social_enable": false,
+          "show_locale_selector": false,
+          "show_currency_selector": false,
+          "currency_select_type": "currency"
+        }
+      },
+      "popups": {
+        "type": "popups",
+        "blocks": {
+          "cookies": {
+            "type": "cookie",
+            "settings": {
+              "show_cookies_popup": true,
+              "text_title": "Are Cookies OK?",
+              "text_body": "<p>We use cookies to improve your browsing experience</p>",
+              "text_accept": "Accept",
+              "text_learn": "Learn more",
+              "learn_url": "shopify://policies/privacy-policy",
+              "text_color": "text--neutral",
+              "button_color": "btn--neutral",
+              "button_style": "btn--soft uppercase",
+              "bg": "palette--light bg--neutral",
+              "position": "popup--left"
+            }
+          },
+          "newsletter_signup": {
+            "type": "newsletter",
+            "disabled": true,
+            "settings": {
+              "title": "Join the club",
+              "text": "<p>Enter your email to save 10% on your next order</p>",
+              "success": "Success! Use code CLUB10 to save 10%",
+              "text_color": "text--neutral",
+              "bg": "palette--light bg--neutral",
+              "position": "popup--right",
+              "trigger": "always",
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
+          }
+        },
+        "block_order": [
+          "cookies",
+          "newsletter_signup"
+        ],
+        "settings": {}
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": true,
+        "settings": {
+          "button_color": "#202a36",
+          "button_icon": "chat_bubble",
+          "button_text": "no_text",
+          "button_horizontal_position": "bottom_left",
+          "button_vertical_position": "lowest",
+          "greeting_message": "👋 Hi, wenn du Fragen hast, lass es uns wissen. Wir sind gerne für dich da!"
+        }
+      }
+    }
+  },
+  "presets": {
+    "Bright": {
+      "color_announcement_bg": "#766456",
+      "color_announcement_text": "#fffcf9",
+      "color_header_bg": "#ffffff",
+      "color_header_text": "#766456",
+      "color_nav_border": "#f8f0e7",
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#766456",
+      "color_primary": "#d2815f",
+      "color_secondary": "#687158",
+      "color_bg_light": "#fcfaf7",
+      "color_bg_inverse": "#333333",
+      "color_primary_inverse": "#ffe5da",
+      "color_secondary_inverse": "#dff3fd",
+      "color_bg_accent_inverse": "#191008",
+      "product_background_color": "#fcfcfc",
+      "color_footer_bg": "#f9f6f2",
+      "color_footer_text": "#766456",
+      "type_heading_font": "itc_clearface_n4",
+      "type_heading_size": 115,
+      "font_title_capitalize": false,
+      "type_accent_font": "avenir_next_n5",
+      "type_accent_size": 95,
+      "type_base_font": "avenir_next_n4",
+      "type_body_size": 100,
+      "animations_scroll_enable": true,
+      "collection_text_alignment": "text-center",
+      "product_grid_style": "under",
+      "image_hover_enable": true,
+      "product_grid_image": "crop",
+      "cart_style": "drawer",
+      "sections": {
+        "announcement": {
+          "type": "announcement",
+          "blocks": {
+            "announce_text": {
+              "type": "text",
+              "disabled": true,
+              "settings": {}
+            },
+            "announce_shipping": {
+              "type": "message",
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "announce_text",
+            "announce_shipping"
+          ],
+          "settings": {}
+        },
+        "header": {
+          "type": "header",
+          "blocks": {
+            "collection_block": {
+              "type": "collection",
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "collection_block"
+          ],
+          "settings": {
+            "main_menu_linklist": "main-menu",
+            "transparent_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "linklist": {
+              "type": "linklist",
+              "settings": {
+                "linklist": "main-menu"
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "linklist",
+            "text",
+            "newsletter"
+          ],
+          "settings": {}
+        },
+        "popups": {
+          "type": "popups",
+          "blocks": {
+            "cookies": {
+              "type": "cookie",
+              "disabled": true,
+              "settings": {
+                "show_cookies_popup": true,
+                "text_title": "Are Cookies OK?",
+                "text_body": "<p>We use cookies to improve your browsing experience</p>",
+                "text_accept": "Accept",
+                "text_learn": "Learn more",
+                "learn_url": "shopify://policies/privacy-policy"
+              }
+            },
+            "newsletter_signup": {
+              "type": "newsletter",
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "cookies",
+            "newsletter_signup"
+          ],
+          "settings": {}
+        }
+      }
+    },
+    "Light": {
+      "color_announcement_bg": "#f7f7f7",
+      "color_announcement_text": "#656565",
+      "color_header_bg": "#ffffff",
+      "color_header_text": "#656565",
+      "color_nav_border": "#d7d7d7",
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#656565",
+      "color_primary": "#f4a482",
+      "color_secondary": "#585e71",
+      "color_bg_light": "#f7f7f7",
+      "color_bg_inverse": "#2e3438",
+      "color_text_inverse": "#ffffff",
+      "color_primary_inverse": "#fcd8c8",
+      "color_secondary_inverse": "#c6dae5",
+      "color_bg_accent_inverse": "#222324",
+      "product_background_color": "#ffffff",
+      "color_footer_bg": "#efefef",
+      "color_footer_text": "#393939",
+      "type_heading_font": "futura_n7",
+      "type_heading_size": 115,
+      "font_title_capitalize": true,
+      "type_accent_font": "itc_johnston_n5",
+      "type_accent_size": 95,
+      "type_base_font": "harmonia_sans_n4",
+      "type_body_size": 100,
+      "button_radius": 0,
+      "collection_text_alignment": "text-center",
+      "product_grid_style": "hover",
+      "image_hover_enable": true,
+      "animations_scroll_enable": true,
+      "product_grid_image": "crop",
+      "cart_style": "pop",
+      "sections": {
+        "announcement": {
+          "type": "announcement",
+          "blocks": {
+            "announce_text": {
+              "type": "text",
+              "disabled": true,
+              "settings": {}
+            },
+            "announce_shipping": {
+              "type": "message",
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "announce_text",
+            "announce_shipping"
+          ],
+          "settings": {}
+        },
+        "header": {
+          "type": "header",
+          "blocks": {
+            "collection_block": {
+              "type": "collection",
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "collection_block"
+          ],
+          "settings": {
+            "main_menu_linklist": "main-menu",
+            "transparent_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "linklist": {
+              "type": "linklist",
+              "settings": {
+                "linklist": "main-menu"
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "linklist",
+            "text",
+            "newsletter"
+          ],
+          "settings": {}
+        },
+        "popups": {
+          "type": "popups",
+          "blocks": {
+            "cookies": {
+              "type": "cookie",
+              "disabled": true,
+              "settings": {
+                "show_cookies_popup": true,
+                "text_title": "Are Cookies OK?",
+                "text_body": "<p>We use cookies to improve your browsing experience</p>",
+                "text_accept": "Accept",
+                "text_learn": "Learn more",
+                "learn_url": "shopify://policies/privacy-policy"
+              }
+            },
+            "newsletter_signup": {
+              "type": "newsletter",
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "cookies",
+            "newsletter_signup"
+          ],
+          "settings": {}
+        }
+      }
+    },
+    "Dark": {
+      "color_announcement_bg": "#000000",
+      "color_announcement_text": "#ffffff",
+      "color_header_bg": "#000000",
+      "color_header_text": "#f1f1f1",
+      "color_nav_border": "#282828",
+      "color_body_bg": "#f7f7f7",
+      "color_body_text": "#000000",
+      "color_primary": "#28a77f",
+      "color_secondary": "#18664e",
+      "color_bg_light": "#eeeeee",
+      "color_bg_inverse": "#282828",
+      "color_text_inverse": "#e9e9e9",
+      "color_primary_inverse": "#28a77f",
+      "color_secondary_inverse": "#78a395",
+      "color_bg_accent_inverse": "#000000",
+      "default_background": "default--dark",
+      "color_footer_bg": "#000000",
+      "color_footer_text": "#fdfdfd",
+      "type_heading_font": "basic_commercial_n7",
+      "type_heading_size": 110,
+      "font_title_capitalize": false,
+      "type_accent_font": "montserrat_n5",
+      "type_accent_size": 100,
+      "type_base_font": "basic_commercial_n4",
+      "type_body_size": 110,
+      "button_radius": 0,
+      "parallax_enable": true,
+      "collection_text_alignment": "text-center",
+      "product_grid_style": "under",
+      "image_hover_enable": true,
+      "product_grid_image": "crop",
+      "swatches_enable": true,
+      "badge_sale_discount": true,
+      "badge_sale_type": "dollar",
+      "color_badge": "#ffffff",
+      "color_badge_text": "#000000",
+      "cart_style": "pop",
+      "cart_color_bg": "palette--dark bg--invert--accent",
+      "animations_enable": true,
+      "image_autoheight_enable": true,
+      "tag_sellout": false,
+      "tag_sale": false,
+      "sections": {
+        "announcement": {
+          "type": "announcement",
+          "blocks": {
+            "announce_text": {
+              "type": "text",
+              "disabled": true,
+              "settings": {}
+            },
+            "announce_shipping": {
+              "type": "message",
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "announce_text",
+            "announce_shipping"
+          ],
+          "settings": {}
+        },
+        "header": {
+          "type": "header",
+          "blocks": {
+            "collection_block": {
+              "type": "collection",
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "collection_block"
+          ],
+          "settings": {
+            "main_menu_linklist": "main-menu",
+            "transparent_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "linklist": {
+              "type": "linklist",
+              "settings": {
+                "linklist": "main-menu"
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "linklist",
+            "text",
+            "newsletter"
+          ],
+          "settings": {}
+        },
+        "popups": {
+          "type": "popups",
+          "blocks": {
+            "cookies": {
+              "type": "cookie",
+              "disabled": true,
+              "settings": {
+                "show_cookies_popup": true,
+                "text_title": "Are Cookies OK?",
+                "text_body": "<p>We use cookies to improve your browsing experience</p>",
+                "text_accept": "Accept",
+                "text_learn": "Learn more",
+                "learn_url": "shopify://policies/privacy-policy"
+              }
+            },
+            "newsletter_signup": {
+              "type": "newsletter",
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "cookies",
+            "newsletter_signup"
+          ],
+          "settings": {}
+        }
+      }
+    }
+  }
+}

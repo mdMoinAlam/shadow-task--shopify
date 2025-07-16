@@ -1,0 +1,407 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<div class = "odv_page_width" style = "background: black;">
+  <div class = "odv_review_container">
+   {% if section.settings.earpod %} 
+     <img class = "odv_earpod_absolute" src = "{{ section.settings.earpod |img_url: '300x' }}">
+    {% endif %}
+    <div class = "odv_review_inner_container">
+    <div class = "odv_review_title">{{ section.settings.title }}</div>
+    <hr>
+     <!-- Swiper -->
+    <div class="swiper odvreview_Swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class = "odv_swiper-content">
+     <div class = "odv_rating_image_container">
+              <img class = "odv_rating_image" src = "{{ section.settings.img1 | img_url: '400x' }}">
+            </div>
+         
+            <div class = "odv_rating-content">
+              <div class = "odv_star_container" style = "display: flex; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+              </div>
+              <div class = "odv_rating"> {{ section.settings.rating1 }}</div>
+            </div>
+          </div>
+        </div>
+             <div class="swiper-slide">
+          <div class = "odv_swiper-content">
+            <div class = "odv_rating_image_container">
+              <img class = "odv_rating_image" src = "{{ section.settings.img2 | img_url: '400x' }}">
+            </div>
+            <div class = "odv_rating-content">
+              <div class = "odv_star_container" style = "display: flex; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+              </div>
+              <div class = "odv_rating"> {{ section.settings.rating2 }}</div>
+            </div>
+          </div>
+        </div>
+                            <div class="swiper-slide">
+          <div class = "odv_swiper-content">
+            <div class = "odv_rating_image_container">
+              <img class = "odv_rating_image" src = "{{ section.settings.img3 | img_url: '400x' }}">
+            </div>
+            <div class = "odv_rating-content">
+              <div class = "odv_star_container" style = "display: flex; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19.481 19.481" enable-background="new 0 0 19.481 19.481">
+                  <g>
+                    <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+                  </g>
+                </svg>
+              </div>
+              <div class = "odv_rating"> {{ section.settings.rating3 }}</div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+        <div class="swiper-scrollbar"></div>            
+    </div>
+</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".odvreview_Swiper", {
+                 scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+
+    });
+  </script>
+                    
+                  </div>
+                    
+</div>
+
+
+
+
+<style>
+.odv_earpod_absolute {
+    position: absolute;
+    bottom: -80px;
+    left: 0px;
+    width: 200px;
+    z-index: 2;
+}
+  .odv_swipe_invisible_desktop{
+    display:none;
+  }
+ .swiper {
+      width: 100%;
+      height: 100%;
+    }
+.odv_star_container svg {
+    fill: #E8A788;
+    width: 25px;
+    height: 25px;
+}
+.odv_review_container hr {
+    clear: both;
+    border-top: solid var(--text);
+    border-width: 3px 0 0;
+    margin: 20px auto;
+    height: 0;
+    border-radius: 15px;
+    width: 30px;
+}
+
+.odv_review_container {
+    background: white;
+    width: 95%;
+    max-width: 1600px;
+    padding: 5rem 2rem;
+    border-radius: 12px;
+    position: relative;
+    margin: 0 auto;
+}
+.odv_swiper-content {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 100px;
+    align-items: center;
+    padding: 3rem 0 5rem;
+}
+  .odv_swiper-content img {
+    border-radius: 12px;
+    min-height: 300px;
+    max-width: 450px;
+    object-fit: cover;
+}
+  .odv_review_title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+}
+  .odv_rating p {
+    color: var(--text);
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+  .swiper-button-next, .swiper-button-prev {
+    color: var(--text);
+}
+
+      .odvreview_Swiper .swiper-scrollbar, .odvreview_Swiper .swiper-scrollbar.swiper-scrollbar-horizontal {
+    position: absolute;
+    left: 50%;
+    bottom: var(--swiper-scrollbar-bottom,4px);
+    top: var(--swiper-scrollbar-top,auto);
+    z-index: 50;
+    height: var(--swiper-scrollbar-size,2.5px);
+    width: calc(35% - 2 * var(--swiper-scrollbar-sides-offset,1%))!important;
+    transform: translateX(-50%);
+}
+
+  
+  @media (min-width: 768px) and (max-width: 1024px){
+    .odv_earpod_absolute {
+    width: 150px;
+    left: 0px;
+      bottom: -50px;
+
+}
+    .odv_swipe_invisible_mobile{
+      display:none;
+    }
+       .odv_swipe_invisible_desktop{
+      display:block;
+    }
+     .odv_review_container {
+    padding: 2rem 5px;
+    }
+.odv_review_inner_container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+}
+    .odv_review_title {
+    font-size: 25px;
+    line-height: 28px;
+}
+    .odv_review_container hr {
+    margin: 15px auto;
+}
+    .odv_swiper-content {
+    padding: 0;
+    flex-direction: column;
+      gap: 25px;
+}
+.odv_swiper-content img {
+    min-height: 180px;
+    width: 100%;
+}
+    .odv_rating p {
+    padding: 0 20px;
+}
+.odv_rating {
+    padding-bottom: 25px;
+}
+    .odvreview_Swiper .swiper-scrollbar, .odvreview_Swiper .swiper-scrollbar.swiper-scrollbar-horizontal {
+    position: absolute;
+    left: 50%;
+    bottom: var(--swiper-scrollbar-bottom,4px);
+    top: var(--swiper-scrollbar-top,auto);
+    z-index: 50;
+    height: var(--swiper-scrollbar-size,2.5px);
+    width: calc(35% - 2 * var(--swiper-scrollbar-sides-offset,1%))!important;
+    transform: translateX(-50%);
+}
+  }
+
+  
+  @media (max-width: 767px){
+    .odv_earpod_absolute {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 110px;
+    z-index: 2;
+}
+    .odv_swipe_invisible_mobile{
+      display: none;
+    }
+    .odv_review_container {
+    margin: 0;
+    background: black;
+    width: 100%;
+    border-radius: unset;
+    padding: 2rem 5px;
+    }
+.odv_review_inner_container {
+    background: white;
+    border-radius: 12px;
+    padding:  25px 20px;
+  position: relative;
+}
+    .odv_review_title {
+    font-size: 20px;
+    line-height: 24px;
+}
+    .odv_review_container hr {
+    margin: 15px auto;
+}
+    .odv_swiper-content {
+    padding: 0;
+    flex-direction: column;
+      gap: 25px;
+}
+.odv_swiper-content img {
+    min-height: 180px;
+    width: 100%;
+}
+    .odv_rating p {
+    font-size: 15px;
+    padding: 0 20px;
+}
+    .odv_swipe_invisible_desktop{
+      display:block;
+    }
+.odvreview_Swiper .swiper-scrollbar, .odvreview_Swiper .swiper-scrollbar.swiper-scrollbar-horizontal {
+    position: absolute;
+    left: 50%;
+    bottom: var(--swiper-scrollbar-bottom,4px);
+    top: var(--swiper-scrollbar-top,auto);
+    z-index: 50;
+    height: var(--swiper-scrollbar-size,2.5px);
+    width: calc(35% - 2 * var(--swiper-scrollbar-sides-offset,1%))!important;
+    transform: translateX(-50%);
+}
+    .odv_rating {
+    padding-bottom: 25px;
+}
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "odv_review",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "earpod",
+        "label": "EarPod"
+      },
+           {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "image_picker",
+        "id": "img1",
+        "label": "Image 1"
+      },
+      {
+        "type": "richtext",
+        "id": "rating1",
+        "label": "Rating 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "img2",
+        "label": "Image 2"
+      },
+      {
+        "type": "richtext",
+        "id": "rating2",
+        "label": "Rating 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "img3",
+        "label": "Image 3"
+      },
+      {
+        "type": "richtext",
+        "id": "rating3",
+        "label": "Rating 3"
+      }
+    ],
+    "presets":[
+      {
+        "name": "odv_review"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

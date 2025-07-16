@@ -1,0 +1,240 @@
+{% if section.settings.title != "" %}
+
+<div class = "odv_page_width" style = "background: {{ section.settings.hexa }};">
+  <div class = "odv_banner_with_text_container ">
+    <img class = "odv_banner_with_text_background" src = "{{ section.settings.img |img_url: '1900x' }}">
+    <div class = "odv_banner_with_text_content">
+      <div class = "odv_banner_with_text_content_inner collapse-text">
+        <div class = "odv_title">{{ section.settings.title }}</div>
+          <div class = "odv_text ">{{ section.settings.text }}</div>   
+      </div>
+       <div class = "odv_vollständig_trigger">weiterlesen..</div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+  $(".collapse-text").each(function(){                         
+    
+    var contentheight = $(this).outerHeight();
+     if ($(window).width() < 767){
+       var maxHeight = 250;
+     }else if ($(window).width() >= 768 && $(window).width() <= 1024){
+       var maxHeight = 300;
+    } else {
+      var maxHeight = 400;
+    }
+  
+
+    if (contentheight >= maxHeight) {
+  
+  
+      $(this).siblings('.odv_vollständig_trigger').show();
+        if ($(window).width() < 767){
+            $(this).parent().css("padding", "25px 20px 50px");
+     }
+ 
+}
+  });
+
+var test = 0; 
+  $(".odv_vollständig_trigger").click(function(){
+   
+    var parent_element = $(this).parents('.odv_banner_with_text_container');
+    var child_element  = $(this).siblings('.collapse-text');
+    $(child_element).toggleClass('no-collapsed');
+    var inner_element_height = $(this).parents('.odv_banner_with_text_content').outerHeight();
+    var child_height = child_element.height();
+    var parent_height = parent_element.outerHeight()
+    
+   if ($(window).width() < 767){
+       var parent_height_with_margin =  parent_height - 100;
+      var additonal_height = 100;
+     var child_height_with_margin = child_height + 100;
+   } else if ($(window).width() >= 768 && $(window).width() <= 1024)
+    {
+       var parent_height_with_margin =  parent_height - 200;
+          var additonal_height = 200;
+         var child_height_with_margin = child_height + 200;
+    } else {
+        var parent_height_with_margin =  parent_height - 400;
+          var additonal_height = 400;
+         var child_height_with_margin = child_height + 400;
+    }
+
+   if (parent_height_with_margin <= inner_element_height) {
+      parent_element.height(inner_element_height + additonal_height);
+   } else if (child_height_with_margin <= parent_height)
+      parent_element.height(child_height + additonal_height);
+
+  if($(this).hasClass("odv_opened")){
+    $(this).removeClass("odv_opened");
+    $(this).html("weiterlesen..");
+  } else {
+    $(this).addClass("odv_opened");
+    $(this).html("weniger..");
+  }
+    
+  });
+
+  
+
+</script>
+
+<style>
+  .no-collapsed {
+    max-height: 100%!important;
+}
+  
+.odv_vollständig_trigger {
+    position: absolute;
+    bottom: 20px;
+    display: none;
+    font-weight: 800;
+    cursor: pointer;
+    font-family: var(---font-stack-heading);
+    color: black;
+}
+.odv_banner_with_text_content_inner {
+    position: relative;
+    display: flex;
+    max-height: 400px;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 15px;
+}
+  .odv_banner_with_text_container{
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 750px;
+    position: relative;
+  }
+  .odv_banner_with_text_background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    object-fit: cover;
+  }
+.odv_banner_with_text_content {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 600px;
+    color: black;
+    background: rgb(255,255,255,0.8);
+    padding: 3rem;
+    border-radius: 0 12px 12px 0;
+}
+
+  @media (min-width: 768px) and (max-width:1024px){
+
+
+        .odv_banner_with_text_content_inner {
+    position: relative;
+    display: flex;
+     max-height: 300px
+    overflow: hidden;
+    flex-direction: column;
+    gap: 5px;
+}
+
+  .odv_banner_with_text_container {
+    min-height: 550px;
+}
+    .odv_vollständig_trigger {
+    font-weight: 600;
+}
+  }
+  @media (max-width: 767px){
+    .odv_banner_with_text_container {
+    width: 100%;
+    min-height: 400px;
+    position: relative;
+}
+    .odv_banner_with_text_content {
+    z-index: 2;
+    position: absolute;
+    top: unset;
+    transform: unset;
+    max-width: 550px;
+    color: black;
+    background: rgb(255,255,255,0.8);
+    bottom: 0;
+    padding: 3rem;
+    border-radius: 0 12px 12px 0;
+}
+.odv_banner_with_text_content {
+    margin: 10px;
+    border-radius: 12px;
+    padding: 25px 20px;
+}
+
+    .odv_banner_with_text_content_inner {
+    position: relative;
+    display: flex;
+     max-height: 250px;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.odv_vollständig_trigger {
+    bottom: 10px;
+    font-weight: 100;
+}
+  }
+
+  @media (min-width: 1600px){
+.odv_banner_with_text_content {
+    border-radius: 12px;
+    margin-left: 5rem;
+}
+  }
+</style>
+
+{% endif %}
+
+{% schema %}
+  {
+    "name": "odv_banner_with_text",
+    "settings": [
+      {
+        "type": "text",
+        "id": "hexa",
+        "label": "Background color hexacode"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Background"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "presets":[
+      {
+        "name": "odv_banner_with_text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
